@@ -1,0 +1,43 @@
+{
+  "name": "jquery-smoove",
+  "title": "jQuery Smoove - Gorgeous CSS3 Scroll Effects",
+  "version": "0.2.11",
+  "description": "A simple jQuery plugin for sexy scrolling effects using CSS3 transitions and transforms.",
+  "homepage": "http://smoove.js.org/",
+  "author": "Adam Bouqdib (http://abemedia.co.uk/)",
+  "keywords": [
+    "jquery",
+    "scroll",
+    "css",
+    "animation"
+  ],
+  "maintainers": [
+    "Adam Bouqdib (http://abemedia.co.uk)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abeMedia/jquery-smoove"
+  },
+  "bugs": {
+    "url": "https://github.com/abeMedia/jquery-smoove/issues"
+  },
+  "main": "dist/jquery.smoove.js",
+  "license": "GPL-2.0",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "jquery": ">=1.7"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-qunit": "^1.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "qunitjs": "^2.0.1"
+  }
+}

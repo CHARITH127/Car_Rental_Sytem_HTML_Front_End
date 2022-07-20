@@ -1,0 +1,280 @@
+body{
+    font-family: 'Manrope', sans-serif;
+    color: rgba(112, 121, 142, 0.73);
+    font-weight: 600;
+}
+
+.customerNavbar{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.customerNavbar span{
+    padding-left: 0.4rem;
+}
+
+.home_form_container{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    height:94vh;
+    width:auto;
+    align-items:center;
+    justify-content:center;
+}
+
+.content_container{
+    height: 97vh;
+    width: 69rem;
+    padding-left:1.4rem;
+    padding-right:1.4rem;
+    padding-top: 1.4rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.filter_container{
+    background-color:#e4e4e4;
+    padding-left:1.4rem;
+    padding-right:1.4rem;
+    width:23rem;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+.carloading_container{
+    background-color:#e4e4e4;
+    padding-left:1.4rem;
+    width:42rem;
+    height:100%;
+    margin-left:1rem;
+}
+.pickup_container{
+    margin-top:3rem;
+    margin-right:0.4rem;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.radio_button_form_container{
+    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
+}
+.radio_button_form_container span{
+    margin: 0;
+    padding-bottom: 0.4rem;
+}
+.home_page_filterButton_container{
+    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
+}
+
+#guestUserHomePage{
+    display: none;
+}
+#guestUserHomePageNavBar{
+    display: none;
+}
+/*=============================================================================================================*/
+
+.form_container{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    height:100vh;
+    width:100vw;
+    align-items:center;
+    justify-content:center;
+    background: rgb(74,0,240) linear-gradient(301deg, rgba(74,0,240,1) 13%, rgba(255,162,162,1) 77%);
+}
+.login_cover{
+    height:55%;
+    width: 59%;
+    background-color: #fff;
+    border-radius:2.3rem;
+    padding: 1.5rem;
+}
+.login_heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+.login_heading p{
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1776ED;
+}
+.login_heading span{
+    color: rgba(123, 131, 151, 0.82);
+    font-weight: 600;
+}
+.login_image_container{
+    height:25rem;
+    width:auto;
+    margin-right:0.4rem;
+    border-radius: 1.5rem;
+    background-color:grey;
+}
+.login_image_container img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+.login_form_container{
+    height:25rem;
+    width:auto;
+    margin-right:0.4rem;
+    border-radius: 1.5rem;
+}
+.login_welcome_banner{
+    margin-top: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login_welcome_banner span:nth-child(1){
+    color: rgba(123, 131, 151, 0.82);
+    font-weight: 600;
+    font-size:0.8rem;
+}
+.login_welcome_banner p:nth-child(2){
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1776ED;
+}
+.login_welcome_banner span:nth-child(3){
+    color: rgba(123, 131, 151, 0.82);
+    font-weight: 600;
+    font-size:0.8rem;
+}
+.login_welcome_banner span:nth-child(3) a{
+    color: #1776ED;
+    cursor: pointer;
+}
+.login_button_container p{
+    margin-top: 1.4rem;
+    font-size: 0.8rem;
+}
+
+.login_button_container p span{
+    color: #1776ED;
+}
+#loginPage{
+    display: none;
+}
+/*=============================================================================================================*/
+
+.customer_registration_cover{
+    height:72%;
+    width: 59%;
+    background-color: #fff;
+    border-radius:2.3rem;
+    padding: 1.2rem;
+}
+.customer_registration_heading_container{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(123, 131, 151, 0.82);
+}
+.registerImageContainer img{
+    width: 100%;
+    height: 100%;
+}
+#customerRegisterPage{
+    display: none;
+}
+
+/*=============================================================================================================*/
+.customer_register_form_container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.customer_form_controller{
+   height: 57rem;
+    width: 86%;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-bottom: 0.6rem;
+    padding-top: 1.4rem;
+    margin-top: 2.4rem;
+    display: flex;
+    flex-direction: row;
+}
+.customer_proImage_loader{
+    height: 14rem;
+    width: 100%;
+    background-color: #0c4128;
+}
+.customer_register_detail_container{
+    height:100% ;
+    padding-top: 0.8rem;
+}
+.cust_pro_car_loading_content{
+    padding-right: 1.4rem;
+    padding-left: 1.4rem;
+}
+.car_container{
+    display: flex;
+    flex-direction: row;
+}
+.cust_pro_reservation_loading_content{
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+}
+.cust_pro_reservation_loading_content div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+.cord_content{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+.details_cover{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+}
+.car_type{
+    margin: 0;
+    font-size: 0.8rem;
+}
+.car_brand{
+    margin: 0;
+    font-size: 2.4rem;
+}
+.details_cover p{
+    margin-right: 0.4rem;
+}
+
+.details_cover p svg{
+    margin-right: 0.3rem;
+}
+.daily_price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.3rem;
+    background-color:#1776ED;
+    border-radius: 0.4rem;
+    color: #e4e4e4;
+
+}
+.daily_price p{
+    margin: 0;
+}
+
+.btnreservation_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}

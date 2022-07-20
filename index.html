@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Rental System</title>
+    <link rel="stylesheet" href="assests/styleSheets/boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/styleSheets/styleSheet/indexStyleSheet.css">
+    <meta name="viewport" content="width=device-width initial scale=1">
+    <link rel="stylesheet" href="assests/styleSheets/fonts/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Nunito:wght@300;400;600&family=PT+Serif:wght@700&family=Poppins:wght@300&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<header>
+    <!--guest user nav bar start-->
+    <nav id="guestUserHomePageNavBar" class="navbar bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">Easy Car Rental Private Limited. </a>
+            <form class="d-flex" role="search">
+                <button id="getStarted" class="btn btn-outline-primary" type="Button">Get Start</button>
+            </form>
+        </div>
+    </nav>
+    <!--guest user nav bar end-->
+
+    <!--customer profile nav bar start-->
+    <nav id="customerProfilePageNavBar" class="navbar-dark bg-primary">
+        <div class="customerNavbar container-fluid">
+            <a class="navbar-brand">Customer Profile <span class="fa fa-user"></span></a>
+
+        </div>
+    </nav>
+    <!--customer profile nav bar end-->
+</header>
+<!--Gust Home page start -->
+<div id="guestUserHomePage">
+    <!--home page content start-->
+    <div class="home_form_container" }>
+        <div class="content_container">
+            <div class="filter_container">
+                <div class="pickup_container">
+                    <div style="width: 100%" class="mb-lg-4 mb-sm-3 mb-3">
+                        <label for="check_in_date" class="form-label">Check in date</label>
+                        <input style="height: 3rem" type="date" class="form-control" id="check_in_date">
+                    </div>
+                    <div style="width: 100%" class="mb-lg-4 mb-sm-3 mb-3">
+                        <label for="return_date" class="form-label">Return date</label>
+                        <input style="height: 3rem" type="date" class="form-control" id="return_date">
+                    </div>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Number of Passengers</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                    </select>
+                    <div class="container">
+                        <div class="radio_button_form_container">
+                            <p>Transmission Type</p>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                               id="manual" value="option1">
+                                        <label class="form-check-label" for="manual">Manual</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="auto"
+                                               value="option1">
+                                        <label class="form-check-label" for="auto">Auto</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio_button_form_container">
+                            <p>Fuel Type</p>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                               id="petrol" value="option1">
+                                        <label class="form-check-label" for="petrol">Petrol</label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                               id="diesel" value="option1">
+                                        <label class="form-check-label" for="diesel">Diesel</label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                               id="hybrid" value="option1">
+                                        <label class="form-check-label" for="hybrid">Hybrid</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home_page_filterButton_container">
+                            <button style="width: 100%" type="button" class="btn btn-primary">Filter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carloading_container">
+
+            </div>
+        </div>
+    </div>
+    <!--home page content end-->
+</div>
+<!--Gust Home page end -->
+
+<!--Login Customer Form Start-->
+<div id="loginPage">
+    <div class="form_container">
+        <div class="login_cover">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="login_heading">
+                            <p>Easy car rental private limited.</p>
+                            <span>We are given the best experience to you...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="login_image_container">
+                            <img src="assests/images/login_Image.jpg" alt="loginImage">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="login_form_container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="login_welcome_banner">
+                                            <span>Start From Here</span>
+                                            <p>Easy car rental private limited.</p>
+                                            <span>Don't have an account ?  <a id="#redirectToCustomerRegistration"> create an account</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="login_welcome_banner">
+                                            <div class="form-floating mb-3">
+                                                <input type="email" class="form-control" id="login_user_name"
+                                                       placeholder="name@example.com">
+                                                <label for="login_user_name">User Name</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input type="email" class="form-control" id="login_password"
+                                                       placeholder="name@example.com">
+                                                <label for="login_password">Password</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="login_button_container">
+                                        <button style="width: 100%" type="button" class="btn btn-primary">Login</button>
+                                        <p>This site is protected by reCAPTION and the google
+                                            <span>Privacy Policy</span> and <span>Terms of Security</span>apply</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Login Customer Form End-->
+
+<!--customer register form start-->
+<div id="customerRegisterPage">
+    <div class="form_container">
+        <div class="customer_registration_cover">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="customer_registration_heading_container">
+                            <p>Customer Registration</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="customer_nic"
+                                           placeholder="name@example.com">
+                                    <label for="customer_nic">Customer NIC</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="customer_address"
+                                           placeholder="name@example.com">
+                                    <label for="customer_address">Customer Address</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="customer_telnumber"
+                                           placeholder="name@example.com">
+                                    <label for="customer_telnumber">Customer Telephone Number</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="customer_email"
+                                           placeholder="name@example.com">
+                                    <label for="customer_email">Customer Email Address</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="customerlicenPhoto" class="form-label">Upload License Photo</label>
+                                    <input class="form-control" type="file" id="customerlicenPhoto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="customerIdcardPhoto" class="form-label">Upload ID Card Photo</label>
+                                    <input class="form-control" type="file" id="customerIdcardPhoto">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <button id="btncustomerRegister" style="width: 100%" type="button"
+                                            class="btn btn-primary">Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <button id="btnbacktoHomeFromCustomerRegistration" style="width: 100%" type="button"
+                                            class="btn btn-outline-primary">Go Back to the Process
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="customerName"
+                                           placeholder="name@example.com">
+                                    <label for="customerName">Customer Name</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="customerPassword"
+                                           placeholder="name@example.com">
+                                    <label for="customerPassword">Customer Password</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <div class="registerImageContainer">
+                                        <img src="assests/images/registration_image.jpg" alt="register form image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--customer register form end-->
+
+<!--customer profile page start-->
+<div id="customerProfilePage">
+    <div class="customer_register_form_container">
+        <div class="customer_form_controller">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="customer_register_detail_container col-3">
+                        <div class="column_container">
+                            <div class="row">
+                                <div class="content_container_insiderow">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="cust_pro_customer_nic"
+                                               placeholder="name@example.com">
+                                        <label for="cust_pro_customer_nic">Customer NIC</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="content_container_insiderow">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="cust_pro_customer_name"
+                                               placeholder="name@example.com">
+                                        <label for="cust_pro_customer_name">Customer Name</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="content_container_insiderow">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="cust_pro_customer_address"
+                                               placeholder="name@example.com">
+                                        <label for="cust_pro_customer_address">Customer Address</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="content_container_insiderow">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="cust_pro_customer_password"
+                                               placeholder="name@example.com">
+                                        <label for="cust_pro_customer_password">Customer Password</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="content_container_insiderow">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="cust_pro_customer_tel"
+                                               placeholder="name@example.com">
+                                        <label for="cust_pro_customer_tel">Customer Telephone NUmber</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="content_container_insiderow">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="cust_pro_customer_email"
+                                               placeholder="name@example.com">
+                                        <label for="cust_pro_customer_email">Email address</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="content_container_insiderow">
+                                    <div class="form-floating mb-3">
+                                        <p>Nic Photo</p>
+                                        <div class="customer_proImage_loader">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="content_container_insiderow">
+                                    <div class="form-floating mb-3">
+                                        <p>Nic Photo</p>
+                                        <div class="customer_proImage_loader">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="content_container_insiderow">
+                                    <div class="form-floating mb-3">
+                                        <div class="customer_pro_edit_button_bar">
+                                            <button id="btn_cust_pro_edit" style="width: 100%" type="button"
+                                                    class="btn btn-primary">Edit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="cust_pro_car_loading_content col-6">
+                        <div class="car_container row">
+                            <div class="col">
+                                <div class="row" style="padding: 0.8rem">
+                                    <div class="card" style=" margin-top: 1.4rem">
+                                        <img src="assests/images/Cars/Audi.png" class="card-img-top" alt="...">
+                                        <div class="cord_content card-body">
+                                            <div class="row" style="margin: 0;padding: 0">
+                                                <div class="col" style="padding-right: 0">
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
+                                                                <p class="car_type">Luxury</p>
+                                                                <p class="car_brand">Audi A4</p>
+                                                                <div class="details_cover">
+                                                                    <p class="car_fuel">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                             width="16" height="16" fill="currentColor"
+                                                                             class="bi bi-fuel-pump-fill"
+                                                                             viewBox="0 0 16 16">
+                                                                            <path d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336.383.228.634.551.794.907.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z"/>
+                                                                        </svg>
+                                                                        Petrol
+                                                                    </p>
+                                                                    <p class="car_transmission">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                                                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                                                                        </svg>
+                                                                        Auto
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
+                                                                <div class="col" style="padding: 0">
+                                                                    <div class="daily_price">Rs : <p class="price">
+                                                                        5200/=</p></div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="btnreservation_container">
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            Reserve
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding: 0.8rem">
+                                    <div class="card" style=" margin-top: 1.4rem">
+                                        <img src="assests/images/Cars/Audi.png" class="card-img-top" alt="...">
+                                        <div class="cord_content card-body">
+                                            <div class="row" style="margin: 0;padding: 0">
+                                                <div class="col" style="padding-right: 0">
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
+                                                                <p class="car_type">Luxury</p>
+                                                                <p class="car_brand">Audi A4</p>
+                                                                <div class="details_cover">
+                                                                    <p class="car_fuel">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                                                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                                                                        </svg>
+                                                                        Petrol
+                                                                    </p>
+                                                                    <p class="car_transmission">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                             width="16" height="16" fill="currentColor"
+                                                                             class="bi bi-person-circle"
+                                                                             viewBox="0 0 16 16">
+                                                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                                            <path fill-rule="evenodd"
+                                                                                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                                        </svg>
+                                                                        Auto
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
+                                                                <div class="col" style="padding: 0">
+                                                                    <div class="daily_price">Rs : <p class="price">
+                                                                        5200/=</p></div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="btnreservation_container">
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            Reserve
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding: 0.8rem">
+                                    <div class="card" style=" margin-top: 1.4rem">
+                                        <img src="assests/images/Cars/Audi.png" class="card-img-top" alt="...">
+                                        <div class="cord_content card-body">
+                                            <div class="row" style="margin: 0;padding: 0">
+                                                <div class="col" style="padding-right: 0">
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
+                                                                <p class="car_type">Luxury</p>
+                                                                <p class="car_brand">Audi A4</p>
+                                                                <div class="details_cover">
+                                                                    <p class="car_fuel">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                             width="16" height="16" fill="currentColor"
+                                                                             class="bi bi-fuel-pump-fill"
+                                                                             viewBox="0 0 16 16">
+                                                                            <path d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336.383.228.634.551.794.907.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z"/>
+                                                                        </svg>
+                                                                        Petrol
+                                                                    </p>
+                                                                    <p class="car_transmission">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                                                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                                                                        </svg>
+                                                                        Auto
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
+                                                                <div class="col" style="padding: 0">
+                                                                    <div class="daily_price">Rs : <p class="price">
+                                                                        5200/=</p></div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="btnreservation_container">
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            Reserve
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row" style="padding: 0.8rem">
+                                    <div class="card" style=" margin-top: 1.4rem">
+                                        <img src="assests/images/Cars/Audi.png" class="card-img-top" alt="...">
+                                        <div class="cord_content card-body">
+                                            <div class="row" style="margin: 0;padding: 0">
+                                                <div class="col" style="padding-right: 0">
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
+                                                                <p class="car_type">Luxury</p>
+                                                                <p class="car_brand">Audi A4</p>
+                                                                <div class="details_cover">
+                                                                    <p class="car_fuel">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                             width="16" height="16" fill="currentColor"
+                                                                             class="bi bi-fuel-pump-fill"
+                                                                             viewBox="0 0 16 16">
+                                                                            <path d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336.383.228.634.551.794.907.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z"/>
+                                                                        </svg>
+                                                                        Petrol
+                                                                    </p>
+                                                                    <p class="car_transmission">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                             width="16" height="16" fill="currentColor"
+                                                                             class="bi bi-person-circle"
+                                                                             viewBox="0 0 16 16">
+                                                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                                                            <path fill-rule="evenodd"
+                                                                                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                                                        </svg>
+                                                                        Auto
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
+                                                                <div class="col" style="padding: 0">
+                                                                    <div class="daily_price">Rs : <p class="price">
+                                                                        5200/=</p></div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="btnreservation_container">
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            Reserve
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding: 0.8rem">
+                                    <div class="card" style=" margin-top: 1.4rem">
+                                        <img src="assests/images/Cars/Audi.png" class="card-img-top" alt="...">
+                                        <div class="cord_content card-body">
+                                            <div class="row" style="margin: 0;padding: 0">
+                                                <div class="col" style="padding-right: 0">
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
+                                                                <p class="car_type">Luxury</p>
+                                                                <p class="car_brand">Audi A4</p>
+                                                                <div class="details_cover">
+                                                                    <p class="car_fuel">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                             width="16" height="16" fill="currentColor"
+                                                                             class="bi bi-fuel-pump-fill"
+                                                                             viewBox="0 0 16 16">
+                                                                            <path d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336.383.228.634.551.794.907.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z"/>
+                                                                        </svg>
+                                                                        Petrol
+                                                                    </p>
+                                                                    <p class="car_transmission">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                                                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                                                                        </svg>
+                                                                        Auto
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
+                                                                <div class="col" style="padding: 0">
+                                                                    <div class="daily_price">Rs : <p class="price">
+                                                                        5200/=</p></div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="btnreservation_container">
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            Reserve
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding: 0.8rem">
+                                    <div class="card" style=" margin-top: 1.4rem">
+                                        <img src="assests/images/Cars/Audi.png" class="card-img-top" alt="...">
+                                        <div class="cord_content card-body">
+                                            <div class="row" style="margin: 0;padding: 0">
+                                                <div class="col" style="padding-right: 0">
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
+                                                                <p class="car_type">Luxury</p>
+                                                                <p class="car_brand">Audi A4</p>
+                                                                <div class="details_cover">
+                                                                    <p class="car_fuel">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                             width="16" height="16" fill="currentColor"
+                                                                             class="bi bi-fuel-pump-fill"
+                                                                             viewBox="0 0 16 16">
+                                                                            <path d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336.383.228.634.551.794.907.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z"/>
+                                                                        </svg>
+                                                                        Petrol
+                                                                    </p>
+                                                                    <p class="car_transmission">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                                                                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                                                                        </svg>
+                                                                        Auto
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
+                                                                <div class="col" style="padding: 0">
+                                                                    <div class="daily_price">Rs : <p class="price">
+                                                                        5200/=</p></div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="btnreservation_container">
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            Reserve
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cust_pro_reservation_loading_content col-3">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row" style="padding: 0.8rem">
+                                    <div class="card" style=" margin-top: 1.4rem">
+                                        <div class="cord_content card-body">
+                                            <div class="row" style="margin: 0;padding: 0">
+                                                <div class="col" style="padding-right: 0">
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
+                                                                <span>Reservation Id</span>
+                                                                <p class="reservation_Id">R-001</p>
+                                                                <span>Pickup date</span>
+                                                                <p class="reservation_pickup">2022-07-01</p>
+                                                                <span>Return date</span>
+                                                                <p class="reservation_return">2022-07-01</p>
+                                                                <div class="revertaion_details_cover">
+                                                                    <span>Reservation status</span>
+                                                                    <p class="reservation_status">
+                                                                        Accept</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
+                                                                <div class="col">
+                                                                    <div class="btnreservation_container">
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            View
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--customer profile page end-->
+
+<script src="assests/styleSheets/boostrap/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="assests/jQuery/jQuery/jquery-3.6.0.min.js"></script>
+<script src="assests/script/indexPage.js"></script>
+</body>
+</html>
