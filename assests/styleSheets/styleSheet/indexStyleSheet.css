@@ -71,7 +71,7 @@ body{
 }
 
 #guestUserHomePage{
-    display: block;
+    display: none;
 }
 #guestUserHomePageNavBar{
     display: none;
@@ -281,5 +281,17 @@ body{
 }
 
 #customerProfilePage{
-    display: none;
+    display: block;/**/
+}
+
+/*==============================================================================================================*/
+.res_cardetail_container{
+    text-align: left;
+}
+
+.resCarImagageContainer{
+    height: 12rem;
+    width:12rem;
+    background-color: #0dcaf0;
+    margin: 0.4rem;
 }
