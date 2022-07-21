@@ -381,3 +381,73 @@ body{
 #adminHomePage{
     display: none;
 }
+
+/*==============================================================================================================*/
+.adminCarManagementContainer{
+    height: 94vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.carManagmnetContentContainer{
+    height: 48rem;
+    width: 84rem;
+    flex-direction: row;
+}
+.carManagementHeding{
+    font-size: 1.4rem;
+}
+
+.searchContainer{
+    display: flex;
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    align-items: center;
+}
+.searchButtonContainer{
+    padding-left: 1.4rem;
+}
+.searchButtonContainer svg{
+    margin-left: 0.8rem;
+}
+.viewCarImageContainer{
+    height: 12rem;
+    background-color: #0dcaf0;
+}
+
+.view_textFlield_container{
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+}
+
+#adminCarManagementPage{
+    display: none;
+}
+.imageContainer{
+    height: 8rem;
+    background-color: #0dcaf0;
+}
+
+/*==============================================================================================================*/
+
+#adminDriverManagementPage{
+    display: none;
+}
+
+/*==============================================================================================================*/
+#adminCustomerManagementPage{
+    display: none;
+}
+
+/*==============================================================================================================*/
+#adminDriverScheduleManagementPage{
+    display: block;
+}
+
+/*==============================================================================================================*/
+#adminReservationManagementPage{
+    display: none;
+}

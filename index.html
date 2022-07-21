@@ -62,10 +62,19 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#">Reservation Management</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Car Management</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Driver Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Driver Schedule</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled">Disabled</a>
@@ -1413,7 +1422,1350 @@
 </div>
 <!--Adimin home page end-->
 
-<!--car-->
+<!--admin reservation management page start-->
+<div id="adminReservationManagementPage">
+    <div class="adminCarManagementContainer">
+        <div class="carManagmnetContentContainer">
+            <div class="carManagementHeding d-flex p-2">Reservation Management</div>
+            <hr>
+            <div class="d-flex flex-row">
+                <div class="p-2 ">
+                    <button id="btnReservationManageGetAll" type="button" class="btn btn-primary">Get all reservations</button>
+                </div>
+                <div class="p-2 ">
+                    <button id="btnReservationManagePending" type="button" class="btn btn-primary">Pending Request</button>
+                </div>
+                <div class="p-2 ">
+                    <button id="btnReservationManageTodayReservations" type="button" class="btn btn-primary">Today Reservations</button>
+                </div>
+            </div>
+            <div class="searchContainer">
+                <div class="d-flex flex-row">
+                    <div class="p-2 flex-fill">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="Reservationidsearch" placeholder="name@example.com">
+                            <label for="idsearch">Search Here (ID)</label>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="searchReservation" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservationView">Expolre More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="updateReservation" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#reservationUpdate">Update Reservation <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-medical" viewBox="0 0 16 16">
+                                <path d="M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317V5.5zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+                                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="p-2 flex-fill">
+                    <table class="resevation_management_table table bg-light" >
+                        <thead>
+                        <tr>
+                            <th scope="col">Reservation id</th>
+                            <th scope="col">Pick up date</th>
+                            <th scope="col">Pick venue</th>
+                            <th scope="col">Return date</th>
+                            <th scope="col">Reservation status</th>
+                            <th scope="col">Driver status</th>
+                        </tr>
+                        </thead>
+                        <tbody class="resevation_management_table_body">
+                        <tr>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--admin reservation management page end-->
+
+<!--car management page start-->
+<div id="adminCarManagementPage">
+    <div class="adminCarManagementContainer">
+        <div class="carManagmnetContentContainer">
+            <div class="carManagementHeding d-flex p-2">Car Management</div>
+            <hr>
+            <div class="d-flex flex-row">
+                <div class="p-2 ">
+                    <button id="btnCarManageAvailableCar" type="button" class="btn btn-primary">Available Cars</button>
+                </div>
+                <div class="p-2 ">
+                    <button id="btnCarManageMaintainginCar" type="button" class="btn btn-primary">Maintain Cars</button>
+                </div>
+                <div class="p-2 ">
+                    <button id="btnCarManageDamageCar" type="button" class="btn btn-primary">Damage Cars</button>
+                </div>
+                <div class="p-2 ">
+                    <button id="btnCarManageGetAll" type="button" class="btn btn-primary">Get All Cars</button>
+                </div>
+            </div>
+            <div class="searchContainer">
+                <div class="d-flex flex-row">
+                    <div class="p-2 flex-fill">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="idsearch" placeholder="name@example.com">
+                            <label for="idsearch">Search Here (ID)</label>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="searchCar" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#carViewModel">Expolre More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="updateCar" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#carUpdateModel">Update Car <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="btnAddCar" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#carAddModel">Add Car <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189l.956-1.913A.5.5 0 0 1 4.309 3h7.382a.5.5 0 0 1 .447.276l.956 1.913a.51.51 0 0 1-.497.731c-.91-.073-3.35-.17-4.597-.17-1.247 0-3.688.097-4.597.17a.51.51 0 0 1-.497-.731Z"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="p-2 flex-fill">
+                    <table class="car_management_table table bg-light" >
+                        <thead>
+                        <tr>
+                            <th scope="col">Car Number</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Mileage</th>
+                            <th scope="col">Damage status</th>
+                            <th scope="col">Maintain status</th>
+                            <th scope="col">loss payment</th>
+                            <th scope="col">Daily rate</th>
+                            <th scope="col">Monthly rate</th>
+                            <th scope="col">Extra price per(km)</th>
+                        </tr>
+                        </thead>
+                        <tbody class="car_management_table_body">
+                        <tr>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--car management page end-->
+
+<!--Driver management page start-->
+<div id="adminDriverManagementPage">
+    <div class="adminCarManagementContainer">
+        <div class="carManagmnetContentContainer">
+            <div class="carManagementHeding d-flex p-2">Driver Management</div>
+            <hr>
+            <div class="searchContainer">
+                <div class="d-flex flex-row">
+                    <div class="p-2 flex-fill">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="adminDriveridsearch" placeholder="name@example.com">
+                            <label for="idsearch">Search Here (ID)</label>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="btnAdminSearchDriver" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adminDriverView">Explore More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="btnAdminUpdateDriver" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#adminDriverUpdate">Update Driver <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="btnAdminAddDriver" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#adminDriverAdd">Add Driver <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="p-2 flex-fill">
+                    <table class="driver_management_table table bg-light" >
+                        <thead>
+                        <tr>
+                            <th scope="col">Driver NIC</th>
+                            <th scope="col">Driver Name</th>
+                            <th scope="col">Driver Address</th>
+                            <th scope="col">Driver Password</th>
+                            <th scope="col">Driver TelephoneNumber</th>
+                            <th scope="col">Driver Email</th>
+                        </tr>
+                        </thead>
+                        <tbody class="car_management_table_body">
+                        <tr>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--car management page end-->
+
+<!--admin page customer section-->
+<div id="adminCustomerManagementPage">
+    <div class="adminCarManagementContainer">
+        <div class="carManagmnetContentContainer">
+            <div class="carManagementHeding d-flex p-2">Customer Management</div>
+            <hr>
+            <div class="d-flex flex-row">
+                <div class="p-2 ">
+                    <button id="btnCustomerManageGetAll" type="button" class="btn btn-primary">Show All Customers</button>
+                </div>
+                <div class="p-2 ">
+                    <button id="btnCustomerManageShowTodayRegisterd" type="button" class="btn btn-primary">Get Today Registerd Customers</button>
+                </div>
+            </div>
+            <div class="searchContainer">
+                <div class="d-flex flex-row">
+                    <div class="p-2 flex-fill">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="adminCustomeridsearch" placeholder="name@example.com">
+                            <label for="idsearch">Search Here (ID)</label>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="btnsearchCustomer" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#customerView">Expolre More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="p-2 flex-fill">
+                    <table class="customer_management_table table bg-light" >
+                        <thead>
+                        <tr>
+                            <th scope="col">Customer NIC</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Customer Address</th>
+                            <th scope="col">Customer Password</th>
+                            <th scope="col">Customer TelephoneNumber</th>
+                            <th scope="col">Customer Email</th>
+                        </tr>
+                        </thead>
+                        <tbody class="customer_management_table_body">
+                        <tr>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--admin page driver schedule section-->
+<div id="adminDriverScheduleManagementPage">
+    <div class="adminCarManagementContainer">
+        <div class="carManagmnetContentContainer">
+            <div class="carManagementHeding d-flex p-2">Driver Schedule Management</div>
+            <hr>
+            <div class="searchContainer">
+                <div class="d-flex flex-row">
+                    <div class="p-2 flex-fill">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="adminDriverScheduleidsearch" placeholder="name@example.com">
+                            <label for="adminDriverScheduleidsearch">Search Here (ID)</label>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="btnsearchDriverSchedule" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#driverScheduleView">Expolre More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="btnUpdateDriverSchedule" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#driverScheduleUpdate">Change Driver <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                            </svg></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="p-2 flex-fill">
+                    <table class="customer_management_table table bg-light" >
+                        <thead>
+                        <tr>
+                            <th scope="col">Schedule Id</th>
+                            <th scope="col">Pick up date</th>
+                            <th scope="col">Pick up time</th>
+                            <th scope="col">Pick up date</th>
+                            <th scope="col">Driver NIC</th>
+                            <th scope="col">Reservation Id</th>
+                        </tr>
+                        </thead>
+                        <tbody class="customer_management_table_body">
+                        <tr>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--admin reservation update model-->
+<div class="modal fade" id="reservationUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reservationUpdate_form">Reservation Update</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <!--first row itemCode-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationUpdate_form_resId" class="form-label">Reservation Id:</label>
+                                <input type="text" class="form-control" id="reservationUpdate_form_resId" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lblreservationUpdateresId"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Second Row item name-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationUpdate_form_pickupdate" class="form-label">Pick up date:</label>
+                                <input type="text" class="form-control" id="reservationUpdate_form_pickupdate" placeholder="Gampaha">
+                                <p><small class="text-danger  pl-1" id="lblreservationUpdatepickupdate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--third Row-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationUpdate_form_pickuptime" class="form-label">Pick up time:</label>
+                                <input type="text" class="form-control" id="reservationUpdate_form_pickuptime"
+                                       placeholder="Charti127">
+                                <p><small class="text-danger  pl-1" id="lblreservationUpdatepickuptime"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--third Row-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationUpdate_form_pickupVenue" class="form-label">Pick up venue:</label>
+                                <input type="text" class="form-control" id="reservationUpdate_form_pickupVenue"
+                                       placeholder="Charti127">
+                                <p><small class="text-danger  pl-1" id="lblreservationUpdatepickupVenue"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fourth Row item price-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationUpdate_form_returnDate" class="form-label">Return date:</label>
+                                <input type="text" class="form-control" id="reservationUpdate_form_returnDate" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblreservationUpdatereturnDate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationUpdate_form_driverStatus" class="form-label">Driver status:</label>
+                                <input type="text" class="form-control" id="reservationUpdate_form_driverStatus" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblreservationUpdatedriverStatus"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationUpdate_form_reservationStatus" class="form-label">Reservation status:</label>
+                                <input type="text" class="form-control" id="reservationUpdate_form_reservationStatus" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblreservationUpdatereservationStatus"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--image loader-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <div class="imageContainer idcardImage">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btn_admin_updateReservation" type="button"  class="btn btn-primary">Update reservation</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--admin reservation view model-->
+<div class="modal fade" id="reservationView" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reservationView_form">Reservation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <!--first row itemCode-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationView_form_resId" class="form-label">Reservation Id:</label>
+                                <input type="text" class="form-control" id="reservationView_form_resId" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lblreservationViewresId"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Second Row item name-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationView_form_pickupdate" class="form-label">Pick up date:</label>
+                                <input type="text" class="form-control" id="reservationView_form_pickupdate" placeholder="Gampaha">
+                                <p><small class="text-danger  pl-1" id="lblreservationViewpickupdate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--third Row-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationView_form_pickuptime" class="form-label">Pick up time:</label>
+                                <input type="text" class="form-control" id="reservationView_form_pickuptime"
+                                       placeholder="Charti127">
+                                <p><small class="text-danger  pl-1" id="lblreservationViewpickuptime"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--third Row-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationView_form_pickupVenue" class="form-label">Pick up venue:</label>
+                                <input type="text" class="form-control" id="reservationView_form_pickupVenue"
+                                       placeholder="Charti127">
+                                <p><small class="text-danger  pl-1" id="lblreservationViewpickupVenue"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fourth Row item price-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationView_form_returnDate" class="form-label">Return date:</label>
+                                <input type="text" class="form-control" id="reservationView_form_returnDate" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblreservationViewreturnDate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationView_form_driverStatus" class="form-label">Driver status:</label>
+                                <input type="text" class="form-control" id="reservationView_form_driverStatus" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblreservationViewdriverStatus"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="reservationView_form_reservationStatus" class="form-label">Reservation status:</label>
+                                <input type="text" class="form-control" id="reservationView_form_reservationStatus" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblreservationViewreservationStatus"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--image loader-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <div class="imageContainer idcardImage">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--view driver schedule model-->
+<div class="modal fade" id="driverScheduleView" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="view_form_driverSchedule">Driver schedule</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <!--first row itemCode-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_driverScheduleID" class="form-label">Schedule Id:</label>
+                                <input type="text" class="form-control" id="view_form_driverScheduleID" placeholder="1">
+                                <p><small class="text-danger  pl-1" id="lblviewdriverScheduleID"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Second Row item name-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_driverSchedulePickupdate" class="form-label">Pick up date:</label>
+                                <input type="text" class="form-control" id="view_form_driverSchedulePickupdate" placeholder="Gampaha">
+                                <p><small class="text-danger  pl-1" id="lbldriverSchedulePickupDate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--third Row-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_driverSchedulePickuptime" class="form-label">Pick up time:</label>
+                                <input type="text" class="form-control" id="view_form_driverSchedulePickuptime"
+                                       placeholder="Charti127">
+                                <p><small class="text-danger  pl-1" id="lbldriverSchedulepickuptime"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fourth Row item price-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_driverScheduleReturndate" class="form-label">Return date:</label>
+                                <input type="text" class="form-control" id="view_form_driverScheduleReturndate" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lbldriverScheduleReturndate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_driverScheduleDriverNic" class="form-label">Driver NIC:</label>
+                                <input type="text" class="form-control" id="view_form_driverScheduleDriverNic" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lbldriverScheduleDriverNic"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_driverScheduleReservationId" class="form-label">Reservation Id:</label>
+                                <input type="text" class="form-control" id="view_form_driverScheduleReservationId" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblviewdriverScheduleReservationId"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--update driver schedule model-->
+<div class="modal fade" id="driverScheduleUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="update_form_driverSchedule">Driver schedule</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <!--first row itemCode-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverScheduleID" class="form-label">Schedule Id:</label>
+                                <input type="text" class="form-control" id="update_form_driverScheduleID" placeholder="1">
+                                <p><small class="text-danger  pl-1" id="lblupdatedriverScheduleID"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Second Row item name-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverSchedulePickupdate" class="form-label">Pick up date:</label>
+                                <input type="text" class="form-control" id="update_form_driverSchedulePickupdate" placeholder="Gampaha">
+                                <p><small class="text-danger  pl-1" id="lblupdatedriverSchedulePickupDate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--third Row-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverSchedulePickuptime" class="form-label">Pick up time:</label>
+                                <input type="text" class="form-control" id="update_form_driverSchedulePickuptime"
+                                       placeholder="Charti127">
+                                <p><small class="text-danger  pl-1" id="lblupdatedriverSchedulepickuptime"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fourth Row item price-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverScheduleReturndate" class="form-label">Return date:</label>
+                                <input type="text" class="form-control" id="update_form_driverScheduleReturndate" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblupdatedriverScheduleReturndate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverScheduleDriverNic" class="form-label">Driver NIC:</label>
+                                <input type="text" class="form-control" id="update_form_driverScheduleDriverNic" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblupdatedriverScheduleDriverNic"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverScheduleReservationId" class="form-label">Reservation Id:</label>
+                                <input type="text" class="form-control" id="update_form_driverScheduleReservationId" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblupdatedriverScheduleReservationId"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btn_admin_updateDriverSchedule" type="button"  class="btn btn-primary">Update driver schedule</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--add car model-->
+<div class="modal fade" id="carAddModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Caradd">Add Car</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carnumber" class="form-label">Car Number:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carnumber" placeholder="GK=999">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarNumber"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carnbrand" class="form-label">Car Brand:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carnbrand" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarBarand"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carcolor" class="form-label">Car color:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carcolor" placeholder="GK=999">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarColor"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_cartype" class="form-label">Car type:</label>
+                                <input type="text" class="form-control" id="admin_addcar_cartype" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarType"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carTransmissionType" class="form-label">Transmission type:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carTransmissionType" placeholder="manual">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarTransmissionType"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carfuelType" class="form-label">Fuel type:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carfuelType" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarFualType"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carmMileage" class="form-label">Car mileage:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carmMileage" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarMileage"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carNumberofPassengers" class="form-label">Number of passengers:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carNumberofPassengers" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarNumberofPassengers"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carDailyRate" class="form-label">Daily rate:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carDailyRate" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarDailyRate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carMonthlyRate" class="form-label">Monthly rate:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carMonthlyRate" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarMonthlyRate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carDamageStstus" class="form-label">Damage ststus:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carDamageStstus" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarDamageStstus"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carMaintainStatus" class="form-label">Maintain status:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carMaintainStatus" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarMaintainStatus"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carExtrakmPrice" class="form-label">Price per extra(km):</label>
+                                <input type="text" class="form-control" id="admin_addcar_carExtrakmPrice" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarExtrakmPrice"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_addcar_carLossPayment" class="form-label">Loss payment:</label>
+                                <input type="text" class="form-control" id="admin_addcar_carLossPayment" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarLossPayment"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admincaradd_frontImage" class="form-label">Upload front image</label>
+                                <input class="form-control" type="file" id="admincaradd_frontImage">
+                                <p><small class="text-danger  pl-1" id="lbladminCaraddFrontImage"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admincaradd_backImage" class="form-label">Upload back image</label>
+                                <input class="form-control" type="file" id="admincaradd_backImage">
+                                <p><small class="text-danger  pl-1" id="lbladminCaraddbackImage"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admincaradd_sideImage" class="form-label">Upload side image</label>
+                                <input class="form-control" type="file" id="admincaradd_sideImage">
+                                <p><small class="text-danger  pl-1" id="lbladminCaraddSideImage"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admincaradd_interiorImage" class="form-label">Upload interior image</label>
+                                <input class="form-control" type="file" id="admincaradd_interiorImage">
+                                <p><small class="text-danger  pl-1" id="lbladminCaraddinteriorImage"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btn_admin_addCar" type="button"  class="btn btn-primary">Add car</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--car update model-->
+<div class="modal fade" id="carUpdateModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="CarUpdate">Customer NIC</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex flex-row mb-3">
+                    <div class="p-2 flex-fill">
+                        <div class="viewCarImageContainer">
+
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="viewCarImageContainer">
+
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="viewCarImageContainer">
+
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="viewCarImageContainer">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carnumber" class="form-label">Car Number:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carnumber" placeholder="GK=999">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarNumber"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carnbrand" class="form-label">Car Brand:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carnbrand" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarBarand"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carcolor" class="form-label">Car color:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carcolor" placeholder="GK=999">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarColor"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_cartype" class="form-label">Car type:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_cartype" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarType"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carTransmissionType" class="form-label">Transmission type:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carTransmissionType" placeholder="manual">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarTransmissionType"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carfuelType" class="form-label">Fuel type:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carfuelType" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarFualType"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carmMileage" class="form-label">Car mileage:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carmMileage" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarMileage"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carNumberofPassengers" class="form-label">Number of passengers:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carNumberofPassengers" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarNumberofPassengers"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carDailyRate" class="form-label">Daily rate:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carDailyRate" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarDailyRate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carMonthlyRate" class="form-label">Monthly rate:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carMonthlyRate" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarMonthlyRate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carDamageStstus" class="form-label">Damage ststus:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carDamageStstus" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarDamageStstus"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carMaintainStatus" class="form-label">Maintain status:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carMaintainStatus" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarMaintainStatus"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carExtrakmPrice" class="form-label">Price per extra(km):</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carExtrakmPrice" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarExtrakmPrice"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_updatecar_carLossPayment" class="form-label">Loss payment:</label>
+                                <input type="text" class="form-control" id="admin_updatecar_carLossPayment" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminupdatecarLossPayment"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admincarupdate_frontImage" class="form-label">Upload front image</label>
+                                <input class="form-control" type="file" id="admincarupdate_frontImage">
+                                <p><small class="text-danger  pl-1" id="lbladminCarupdateFrontImage"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admincarupdate_backImage" class="form-label">Upload back image</label>
+                                <input class="form-control" type="file" id="admincarupdate_backImage">
+                                <p><small class="text-danger  pl-1" id="lbladminCarupdatebackImage"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admincarupdate_sideImage" class="form-label">Upload side image</label>
+                                <input class="form-control" type="file" id="admincarupdate_sideImage">
+                                <p><small class="text-danger  pl-1" id="lbladminCarupdateSideImage"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admincarupdate_interiorImage" class="form-label">Upload interior image</label>
+                                <input class="form-control" type="file" id="admincarupdate_interiorImage">
+                                <p><small class="text-danger  pl-1" id="lbladminCarupdateinteriorImage"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btn_admin_updateCar" type="button"  class="btn btn-primary">Update car</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--car view model-->
+<div class="modal fade" id="carViewModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Car View">Customer NIC</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex flex-row mb-3">
+                    <div class="p-2 flex-fill">
+                        <div class="viewCarImageContainer">
+
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="viewCarImageContainer">
+
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="viewCarImageContainer">
+
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="viewCarImageContainer">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carnumber" class="form-label">Car Number:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carnumber" placeholder="GK=999">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarNumber"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carnbrand" class="form-label">Car Brand:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carnbrand" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarBarand"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carcolor" class="form-label">Car color:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carcolor" placeholder="GK=999">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarColor"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_cartype" class="form-label">Car type:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_cartype" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarType"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carTransmissionType" class="form-label">Transmission type:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carTransmissionType" placeholder="manual">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarTransmissionType"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carfuelType" class="form-label">Fuel type:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carfuelType" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarFualType"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carmMileage" class="form-label">Car mileage:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carmMileage" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarMileage"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carNumberofPassengers" class="form-label">Number of passengers:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carNumberofPassengers" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarNumberofPassengers"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carDailyRate" class="form-label">Daily rate:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carDailyRate" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarDailyRate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carMonthlyRate" class="form-label">Monthly rate:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carMonthlyRate" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarMonthlyRate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carDamageStstus" class="form-label">Damage ststus:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carDamageStstus" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarDamageStstus"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carMaintainStatus" class="form-label">Maintain status:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carMaintainStatus" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarMaintainStatus"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carExtrakmPrice" class="form-label">Price per extra(km):</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carExtrakmPrice" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarExtrakmPrice"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="admin_viewcar_carLossPayment" class="form-label">Loss payment:</label>
+                                <input type="text" class="form-control" id="admin_viewcar_carLossPayment" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lbladminviewcarLossPayment"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--reservation model-->
 <div class="modal fade" style="width:100%" tabindex="-1" id="reservationModel">
@@ -1652,6 +3004,98 @@
     </div>
 </div>
 
+<!--customer view model-->
+<div class="modal fade" id="customerView" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="view_form_customerNic">Customer NIC</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <!--first row itemCode-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_customerNic" class="form-label">Custommer Name:</label>
+                                <input type="text" class="form-control" id="view_form_customerName" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lblcustviewNic"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Second Row item name-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_customerAddress" class="form-label">Customer Address:</label>
+                                <input type="text" class="form-control" id="view_form_customerAddress" placeholder="Gampaha">
+                                <p><small class="text-danger  pl-1" id="lblcustviewAddress"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--third Row-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_customerPassword" class="form-label">Customer Password:</label>
+                                <input type="text" class="form-control" id="view_form_customerPassword"
+                                       placeholder="Charti127">
+                                <p><small class="text-danger  pl-1" id="lblcustviewPassword"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fourth Row item price-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_customerTel" class="form-label">Customer Telephone Number:</label>
+                                <input type="text" class="form-control" id="view_form_customerTel" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblcustviewTel"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_customerEmail" class="form-label">Customer Email:</label>
+                                <input type="text" class="form-control" id="view_form_customerEmail" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lblcustvieweEmail"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--image loader-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <div class="imageContainer idcardImage">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <div class="imageContainer liacenImage">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--customer details update model-->
 <div class="modal fade" id="customerUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -1750,8 +3194,101 @@
     </div>
 </div>
 
+<!--driver view-->
+<div class="modal fade" id="adminDriverView" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="view_form_driverNic">Driver NIC</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <!--first row itemCode-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_DriverName" class="form-label">Driver Name:</label>
+                                <input type="text" class="form-control" id="view_form_DriverName" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lbldrivtviewNic"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Second Row item name-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_driverAddress" class="form-label">Driver Address:</label>
+                                <input type="text" class="form-control" id="view_form_driverAddress" placeholder="Gampaha">
+                                <p><small class="text-danger  pl-1" id="lbldrivviewAddress"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--third Row-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_driverPassword" class="form-label">Driver Password:</label>
+                                <input type="text" class="form-control" id="view_form_driverPassword"
+                                       placeholder="Charti127">
+                                <p><small class="text-danger  pl-1" id="lbldriverviewPassword"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fourth Row item price-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_driverTel" class="form-label">Driver Telephone Number:</label>
+                                <input type="text" class="form-control" id="view_form_driverTel" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lbldivertviewTel"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="view_form_driverEmail" class="form-label">Driver Email:</label>
+                                <input type="text" class="form-control" id="view_form_driverEmail" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lbldriverviewEmail"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--image loader-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <div class="imageContainer driverIdcardImage">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <div class="imageContainer driverLiacenImage">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--diver details update model-->
-<div class="modal fade" id="driverUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="adminDriverUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -1816,6 +3353,24 @@
                         </div>
                     </div>
 
+                    <!--image loader-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <div class="imageContainer driverIdcardImage">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <div class="imageContainer driverLiacenImage">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!--Id card Choser-->
                     <div class="row">
                         <div class="col">
@@ -1843,6 +3398,104 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button id="btn_updateDriver" type="button"  class="btn btn-primary">Update Details</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--add driver form-->
+<div class="modal fade" id="adminDriverAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="add_form_driverNic">Driver NIC</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <!--first row itemCode-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_DriverName" class="form-label">Driver Name:</label>
+                                <input type="text" class="form-control" id="add_form_DriverName" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lbldrivtaddeNic"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Second Row item name-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverAddress" class="form-label">Driver Address:</label>
+                                <input type="text" class="form-control" id="add_form_driverAddress" placeholder="Gampaha">
+                                <p><small class="text-danger  pl-1" id="lbldrivaddAddress"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--third Row-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverPassword" class="form-label">Driver Password:</label>
+                                <input type="text" class="form-control" id="add_form_driverPassword"
+                                       placeholder="Charti127">
+                                <p><small class="text-danger  pl-1" id="lbldriveraddPassword"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--fourth Row item price-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverTel" class="form-label">Driver Telephone Number:</label>
+                                <input type="text" class="form-control" id="add_form_driverTel" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lbldivertaddTel"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email Address-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverEmail" class="form-label">Driver Email:</label>
+                                <input type="text" class="form-control" id="add_form_driverEmail" placeholder="0123412110">
+                                <p><small class="text-danger  pl-1" id="lbldriveraddEmail"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Id card Choser-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverIdCard" class="form-label">Upload ID Card Photo</label>
+                                <input class="form-control" type="file" id="add_form_driverIdCard">
+                                <p><small class="text-danger  pl-1" id="lbldriveraddIDCard"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--driving license Choser-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_driverDrivingLicense" class="form-label">Upload driving license photo</label>
+                                <input class="form-control" type="file" id="add_form_driverDrivingLicense">
+                                <p><small class="text-danger  pl-1" id="lbldriveraddDrivingLicense"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btn_addDriver" type="button"  class="btn btn-primary">Add Driver</button>
             </div>
         </div>
     </div>
