@@ -4,14 +4,6 @@ body{
     font-weight: 600;
 }
 
-.customerNavbar{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-.customerNavbar span{
-    padding-left: 0.4rem;
-}
 
 .home_form_container{
     display:flex;
@@ -281,7 +273,11 @@ body{
 }
 
 #customerProfilePage{
-    display: block;/**/
+    display: none;
+}
+
+#customerProfilePageNavBar{
+    display: none;
 }
 
 /*==============================================================================================================*/
@@ -294,4 +290,94 @@ body{
     width:12rem;
     background-color: #0dcaf0;
     margin: 0.4rem;
+}
+
+/*==============================================================================================================*/
+#DriverPageNavBar{
+    display: none;
+}
+#driverscheduelePage{
+    display: none;
+}
+.driver_schedule_container{
+    margin: 3.4rem;
+}
+
+/*==============================================================================================================*/
+
+.adminContentContainer{
+    height: 94vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sumary_container {
+    height: 48rem;
+    width: 84rem;
+    flex-direction: row;
+}
+
+.sumeryHedingBar{
+    align-items: center;
+}
+
+.sumeryHead{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card_Container{
+    padding: 0.8rem;
+}
+
+.iconContainer{
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.4rem;
+}
+
+.iconContainer svg {
+    color: #1776ED;
+    width: 6.5rem;
+    height: 5.4rem;
+}
+.income_container{
+    height: 4rem;
+    background-color:#1776ED ;
+    color: #e4e4e4;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.income_container p{
+    margin: 0;
+}
+
+.count_container{
+    height: 4rem;
+    background-color:#1776ED ;
+    color: #e4e4e4;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.count_container p{
+    margin: 0;
+}
+
+#adminHomePage{
+    display: none;
 }
