@@ -1,6 +1,6 @@
 body{
     font-family: 'Manrope', sans-serif;
-    color: rgba(112, 121, 142, 0.73);
+    color: rgba(112, 121, 142, 0.97);
     font-weight: 600;
 }
 
@@ -63,10 +63,10 @@ body{
 }
 
 #guestUserHomePage{
-    display: none;
+    display: block;
 }
 #guestUserHomePageNavBar{
-    display: none;
+    display: block;
 }
 /*=============================================================================================================*/
 
@@ -444,10 +444,13 @@ body{
 
 /*==============================================================================================================*/
 #adminDriverScheduleManagementPage{
-    display: block;
+    display: none;
 }
 
 /*==============================================================================================================*/
 #adminReservationManagementPage{
+    display: none;
+}
+#adminNavBar{
     display: none;
 }

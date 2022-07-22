@@ -17,7 +17,7 @@
     <!--guest user nav bar start-->
     <nav id="guestUserHomePageNavBar" class="navbar bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand">Customer Profile </a>
+            <a class="navbar-brand">Easy Car Rental Private Limited.</a>
             <form class="d-flex" role="search">
                 <button id="getStarted" class="btn btn-outline-primary" type="Button">Get Start</button>
             </form>
@@ -48,8 +48,6 @@
     <!--driver nav bar end-->
 
     <!--admin nav bar start-->
-
-
     <nav id="adminNavBar" class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Admin Profile</a>
@@ -59,25 +57,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" id="admin_home_page" style="cursor: pointer">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Reservation Management</a>
+                        <a class="nav-link" id="admin_reservation_page" style="cursor: pointer">Reservation Management</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Car Management</a>
+                        <a class="nav-link" id="admin_car_page" style="cursor: pointer">Car Management</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Driver Management</a>
+                        <a class="nav-link"id="admin_driver_page" style="cursor: pointer">Driver Management</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Customer</a>
+                        <a class="nav-link" id="admin_customer_page" style="cursor: pointer">Customer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Driver Schedule</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" id="admin_driver_schedule_page" style="cursor: pointer">Driver Schedule</a>
                     </li>
                 </ul>
             </div>
@@ -540,7 +535,7 @@
                                         <div class="login_welcome_banner">
                                             <span>Start From Here</span>
                                             <p>Easy car rental private limited.</p>
-                                            <span>Don't have an account ?  <a id="#redirectToCustomerRegistration"> create an account</a></span>
+                                            <span>Don't have an account ?  <a id="redirectToCustomerRegistration"> create an account</a></span>
                                         </div>
                                     </div>
                                 </div>
@@ -562,7 +557,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="login_button_container">
-                                        <button style="width: 100%" type="button" class="btn btn-primary">Login</button>
+                                        <button style="width: 100%" type="button" id="btn_login_button" class="btn btn-primary">Login</button>
+                                        <button style="width: 100%; margin-top: 0.8rem" id="btnBackToHomePage" type="button" class="btn btn-outline-info">Go back</button>
                                         <p>This site is protected by reCAPTION and the google
                                             <span>Privacy Policy</span> and <span>Terms of Security</span>apply</p>
                                     </div>
@@ -764,7 +760,7 @@
                                 <div class="content_container_insiderow">
                                     <div class="form-floating mb-3">
                                         <p>Nic Photo</p>
-                                        <div class="customer_proImage_loader">
+                                        <div id="cust_pro_idcard_imageLoader" class="customer_proImage_loader">
 
                                         </div>
                                     </div>
@@ -774,7 +770,7 @@
                                 <div class="content_container_insiderow">
                                     <div class="form-floating mb-3">
                                         <p>Nic Photo</p>
-                                        <div class="customer_proImage_loader">
+                                        <div id="cust_pro_licen_imageLoader" class="customer_proImage_loader">
 
                                         </div>
                                     </div>
@@ -3501,10 +3497,14 @@
     </div>
 </div>
 
+
 <script src="assests/styleSheets/boostrap/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 <script src="assests/jQuery/jQuery/jquery-3.6.0.min.js"></script>
 <script src="assests/script/indexPage.js"></script>
+<script src="assests/script/LoginForm.js"></script>
+<script src="assests/script/CustomerForm.js"></script>
+<script src="assests/script/AdminHome.js"></script>
 </body>
 </html>
