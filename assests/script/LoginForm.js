@@ -32,8 +32,6 @@ $("#btn_login_button").click(function () {
 
                 /*loading customer details*/
 
-                let customerIdCardPhotoUrl = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/" + resp.data.idCard;
-                let customerLicensePhotoUrl = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/" + resp.data.drivingLicense;
 
                 $("#cust_pro_customer_nic").val(resp.data.customerNic);
                 $("#cust_pro_customer_name").val(resp.data.customerName);
@@ -41,6 +39,11 @@ $("#btn_login_button").click(function () {
                 $("#cust_pro_customer_email").val(resp.data.email);
                 $("#cust_pro_customer_address").val(resp.data.customerAddress);
                 $("#cust_pro_customer_tel").val(resp.data.customerTel);
+
+
+                let customerIdCardPhotoUrl = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/"+resp.data.idCard;
+                let customerLicensePhotoUrl = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/"+resp.data.drivingLicense;
+
 
                 $("#cust_pro_idcard_imageLoader").css({
                     "background": `url(${customerIdCardPhotoUrl})`,

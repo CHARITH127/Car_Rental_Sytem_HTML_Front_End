@@ -71,4 +71,18 @@ $("#btnbacktoHomeFromCustomerRegistration").click(function () {
     $("#adminDriverScheduleManagementPage").css("display", "none");
 })
 
-
+$("#guestUserHomePage").css("display", "none");
+$("#guestUserHomePageNavBar").css("display", "none");
+$("#loginPage").css("display", "none");
+$("#customerRegisterPage").css("display", "none");
+$("#customerProfilePage").css("display", "none");
+$("#customerProfilePageNavBar").css("display", "none");
+$("#driverscheduelePage").css("display", "none");
+$("#DriverPageNavBar").css("display", "none");
+$("#adminHomePage").css("display", "none");
+$("#adminNavBar").css("display", "block");
+$("#adminReservationManagementPage").css("display", "block");
+$("#adminCarManagementPage").css("display", "none");
+$("#adminDriverManagementPage").css("display", "none");
+$("#adminCustomerManagementPage").css("display", "none");
+$("#adminDriverScheduleManagementPage").css("display", "none");

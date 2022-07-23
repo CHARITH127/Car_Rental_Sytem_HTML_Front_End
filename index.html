@@ -1458,6 +1458,14 @@
                             </svg></button>
                         </div>
                     </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button type="button" id="billReservation" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#billing">Billing <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-receipt" viewBox="0 0 16 16">
+                                <path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"/>
+                                <path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
+                            </svg></button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="d-flex flex-row">
@@ -1499,9 +1507,6 @@
             <hr>
             <div class="d-flex flex-row">
                 <div class="p-2 ">
-                    <button id="btnCarManageAvailableCar" type="button" class="btn btn-primary">Available Cars</button>
-                </div>
-                <div class="p-2 ">
                     <button id="btnCarManageMaintainginCar" type="button" class="btn btn-primary">Maintain Cars</button>
                 </div>
                 <div class="p-2 ">
@@ -1510,6 +1515,7 @@
                 <div class="p-2 ">
                     <button id="btnCarManageGetAll" type="button" class="btn btn-primary">Get All Cars</button>
                 </div>
+
             </div>
             <div class="searchContainer">
                 <div class="d-flex flex-row">
@@ -1541,8 +1547,20 @@
                             </svg></button>
                         </div>
                     </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button id="btnCarManageSetAvailableFromMaintain" type="button" class="btn btn-primary">Set available</button>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="searchButtonContainer">
+                            <button id="btnCarManageSetAvailableFromDamage" type="button" class="btn btn-primary">Set available</button>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="carManagementStatus d-flex p-2"><span>All Cars</span></div>
+            <hr>
             <div class="d-flex flex-row">
                 <div class="p-2 flex-fill">
                     <table class="car_management_table table bg-light" >
@@ -1631,7 +1649,7 @@
                             <th scope="col">Driver Email</th>
                         </tr>
                         </thead>
-                        <tbody class="car_management_table_body">
+                        <tbody class=driver_management_table_body">
                         <tr>
                             <td>Mark</td>
                             <td>Mark</td>
@@ -2276,18 +2294,40 @@
                     <div class="p-2 flex-fill">
                         <div class="view_textFlield_container">
                             <div class="mb-3">
-                                <label for="admin_addcar_carDamageStstus" class="form-label">Damage ststus:</label>
-                                <input type="text" class="form-control" id="admin_addcar_carDamageStstus" placeholder="1231231">
-                                <p><small class="text-danger  pl-1" id="lbladminaddcarDamageStstus"></small></p>
+                                <label for="admin_addcar_damageStatus_Yes" class="form-label">Damage ststus:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="Yes" type="radio" name="adminAddcardamage" id="admin_addcar_damageStatus_Yes">
+                                    <label class="form-check-label" for="admin_carUpdate_maintanStatus_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="No"type="radio" name="adminAddcardamage" id="admin_addcar_damageStatus_No">
+                                    <label class="form-check-label" for="admin_carUpdate_maintanStatus_No">
+                                        No
+                                    </label>
+                                </div>
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarecarDamageStstus"></small></p>
                             </div>
                         </div>
                     </div>
                     <div class="p-2 flex-fill">
                         <div class="view_textFlield_container">
                             <div class="mb-3">
-                                <label for="admin_addcar_carMaintainStatus" class="form-label">Maintain status:</label>
-                                <input type="text" class="form-control" id="admin_addcar_carMaintainStatus" placeholder="petrol">
-                                <p><small class="text-danger  pl-1" id="lbladminaddcarMaintainStatus"></small></p>
+                                <label for="admin_addcar_maintainStatus_Yes" class="form-label">Maintain ststus:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="Yes" type="radio" name="adminAddcarMaintain" id="admin_addcar_maintainStatus_Yes">
+                                    <label class="form-check-label" for="admin_carUpdate_maintanStatus_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="No" type="radio" name="adminAddcarMaintain" id="admin_addcar_maintainStatus_No">
+                                    <label class="form-check-label" for="admin_carUpdate_maintanStatus_No">
+                                        No
+                                    </label>
+                                </div>
+                                <p><small class="text-danger  pl-1" id="lbladminaddcarecarmaintainStstus"></small></p>
                             </div>
                         </div>
                     </div>
@@ -2497,8 +2537,19 @@
                     <div class="p-2 flex-fill">
                         <div class="view_textFlield_container">
                             <div class="mb-3">
-                                <label for="admin_updatecar_carDamageStstus" class="form-label">Damage ststus:</label>
-                                <input type="text" class="form-control" id="admin_updatecar_carDamageStstus" placeholder="1231231">
+                                <label for="admin_carUpdate_damageStatus_Yes" class="form-label">Damage ststus:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="Yes" type="radio" name="admincardamage" id="admin_carUpdate_damageStatus_Yes">
+                                    <label class="form-check-label" for="admin_carUpdate_maintanStatus_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="No" type="radio" name="admincardamage" id="admin_carUpdate_damageStatus_No">
+                                    <label class="form-check-label" for="admin_carUpdate_maintanStatus_No">
+                                        No
+                                    </label>
+                                </div>
                                 <p><small class="text-danger  pl-1" id="lbladminupdatecarDamageStstus"></small></p>
                             </div>
                         </div>
@@ -2506,8 +2557,19 @@
                     <div class="p-2 flex-fill">
                         <div class="view_textFlield_container">
                             <div class="mb-3">
-                                <label for="admin_updatecar_carMaintainStatus" class="form-label">Maintain status:</label>
-                                <input type="text" class="form-control" id="admin_updatecar_carMaintainStatus" placeholder="petrol">
+                                <label for="admin_carUpdate_maintanStatus_Yes" class="form-label">Maintain status:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="Yes" type="radio" name="flexRadioDefault" id="admin_carUpdate_maintanStatus_Yes">
+                                    <label class="form-check-label" for="admin_carUpdate_maintanStatus_Yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" value="No"  type="radio" name="flexRadioDefault" id="admin_carUpdate_maintanStatus_No">
+                                    <label class="form-check-label"  for="admin_carUpdate_maintanStatus_No">
+                                        No
+                                    </label>
+                                </div>
                                 <p><small class="text-danger  pl-1" id="lbladminupdatecarMaintainStatus"></small></p>
                             </div>
                         </div>
@@ -2987,6 +3049,26 @@
                                 </div>
                             </div>
 
+                            <!--chekckout date-->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radNeedDriver">
+                                        <label class="form-check-label" for="radNeedDriver">
+                                            Nead a driver
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radNoNeedDriver">
+                                        <label class="form-check-label" for="radNoNeedDriver">
+                                            Don't need a driver
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -3092,23 +3174,151 @@
     </div>
 </div>
 
+<!--billing model-->
+<div class="modal fade" id="billing" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Billing_form">Billing Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="billing_date" class="form-label">Billing Date:</label>
+                                <input type="text" class="form-control" id="billing_date" placeholder="">
+                                <p><small class="text-danger  pl-1" id="lblbillingdate"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="billing_id" class="form-label">Billing Id:</label>
+                                <input type="text" class="form-control" id="billing_id" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lblbillingid"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="billing_reservation_id" class="form-label">Reservation Id:</label>
+                                <input type="text" class="form-control" id="billing_reservation_id" placeholder="GK=999">
+                                <p><small class="text-danger  pl-1" id="lblbillingreservationId"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="billing_losspayment" class="form-label">Loss payment:</label>
+                                <input type="text" class="form-control" id="billing_losspayment" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lblbillinglosspayment"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="billing_damage_payment" class="form-label">Damage payment:</label>
+                                <input type="text" class="form-control" id="billing_damage_payment" placeholder="manual">
+                                <p><small class="text-danger  pl-1" id="lblbillingDamagePayment"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="billing_driver_payment" class="form-label">Driver payment:</label>
+                                <input type="text" class="form-control" id="billing_driver_payment" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lblbillingDriverPayment"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="billing_hire_charges" class="form-label">Hire charges:</label>
+                                <input type="text" class="form-control" id="billing_hire_charges" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lblbillinghirecharges"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="billing_additonal_charges" class="form-label">Additional charges:</label>
+                                <input type="text" class="form-control" id="billing_additonal_charges" placeholder="petrol">
+                                <p><small class="text-danger  pl-1" id="lblbillingadditonalcharges"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <label for="billing_full_payment" class="form-label">Full payment:</label>
+                                <input type="text" class="form-control" id="billing_full_payment" placeholder="1231231">
+                                <p><small class="text-danger  pl-1" id="lblbillingFullPayment"></small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 flex-fill">
+                        <div class="view_textFlield_container">
+                            <div class="mb-3">
+                                <button id="calculate_fullPayment" type="button" class="btn btn-primary">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btn_bill_proceed" type="button"  class="btn btn-primary">Proceed the bill</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--customer details update model-->
 <div class="modal fade" id="customerUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="update_form_customerNic">Customer NIC</h5>
+                <h5 class="modal-title" id="update_form_customer">Customer update</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="container">
+
                     <!--first row itemCode-->
                     <div class="row">
                         <div class="col">
                             <div class="mb-3">
-                                <label for="update_form_customerNic" class="form-label">Custommer Name:</label>
-                                <input type="text" class="form-control" id="update_form_customerName" placeholder="Charith Wishvajith">
+                                <label for="update_form_customerNic" class="form-label">Custommer NIC:</label>
+                                <input type="text" class="form-control" id="update_form_customerNIC" placeholder="Charith Wishvajith">
                                 <p><small class="text-danger  pl-1" id="lblcustupdateNic"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--first row itemCode-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_customerName" class="form-label">Custommer Name:</label>
+                                <input type="text" class="form-control" id="update_form_customerName" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lblcustupdateName"></small></p>
                             </div>
                         </div>
                     </div>
@@ -3184,7 +3394,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button id="btn_AddNewItem" type="button"  class="btn btn-primary">Update Details</button>
+                <button id="btn_update_customer" type="button"  class="btn btn-primary">Update Details</button>
             </div>
         </div>
     </div>
@@ -3506,5 +3716,6 @@
 <script src="assests/script/LoginForm.js"></script>
 <script src="assests/script/CustomerForm.js"></script>
 <script src="assests/script/AdminHome.js"></script>
+<script src="assests/script/CarForm.js"></script>
 </body>
 </html>
