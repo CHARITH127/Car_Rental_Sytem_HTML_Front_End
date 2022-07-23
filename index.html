@@ -1649,7 +1649,7 @@
                             <th scope="col">Driver Email</th>
                         </tr>
                         </thead>
-                        <tbody class=driver_management_table_body">
+                        <tbody class="driver_management_table_body">
                         <tr>
                             <td>Mark</td>
                             <td>Mark</td>
@@ -2413,22 +2413,22 @@
             <div class="modal-body">
                 <div class="d-flex flex-row mb-3">
                     <div class="p-2 flex-fill">
-                        <div class="viewCarImageContainer">
+                        <div id="update_car_frontImage" class="viewCarImageContainer">
 
                         </div>
                     </div>
-                    <div class="p-2 flex-fill">
-                        <div class="viewCarImageContainer">
+                    <div  class="p-2 flex-fill">
+                        <div id="update_car_backImage" class="viewCarImageContainer">
 
                         </div>
                     </div>
-                    <div class="p-2 flex-fill">
-                        <div class="viewCarImageContainer">
+                    <div  class="p-2 flex-fill">
+                        <div id="update_car_sideImage" class="viewCarImageContainer">
 
                         </div>
                     </div>
-                    <div class="p-2 flex-fill">
-                        <div class="viewCarImageContainer">
+                    <div  class="p-2 flex-fill">
+                        <div id="update_car_interiorImage" class="viewCarImageContainer">
 
                         </div>
                     </div>
@@ -2559,13 +2559,13 @@
                             <div class="mb-3">
                                 <label for="admin_carUpdate_maintanStatus_Yes" class="form-label">Maintain status:</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" value="Yes" type="radio" name="flexRadioDefault" id="admin_carUpdate_maintanStatus_Yes">
+                                    <input class="form-check-input" value="Yes" type="radio" name="admincarMaintain" id="admin_carUpdate_maintanStatus_Yes">
                                     <label class="form-check-label" for="admin_carUpdate_maintanStatus_Yes">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" value="No"  type="radio" name="flexRadioDefault" id="admin_carUpdate_maintanStatus_No">
+                                    <input class="form-check-input" value="No"  type="radio" name="admincarMaintain" id="admin_carUpdate_maintanStatus_No">
                                     <label class="form-check-label"  for="admin_carUpdate_maintanStatus_No">
                                         No
                                     </label>
@@ -3498,18 +3498,30 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="update_form_driverNic">Driver NIC</h5>
+                <h5 class="modal-title" id="driverUpdate">Driver Update</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="container">
+
+                    <!--first row itemCode-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="update_form_DriverNIC" class="form-label">Driver NIC:</label>
+                                <input type="text" class="form-control" id="update_form_DriverNIC" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lbldrivtupdateNic"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
                     <!--first row itemCode-->
                     <div class="row">
                         <div class="col">
                             <div class="mb-3">
                                 <label for="update_form_DriverName" class="form-label">Driver Name:</label>
                                 <input type="text" class="form-control" id="update_form_DriverName" placeholder="Charith Wishvajith">
-                                <p><small class="text-danger  pl-1" id="lbldrivtupdateNic"></small></p>
+                                <p><small class="text-danger  pl-1" id="lbldrivtupdateName"></small></p>
                             </div>
                         </div>
                     </div>
@@ -3563,14 +3575,14 @@
                     <div class="row">
                         <div class="col">
                             <div class="mb-3">
-                                <div class="imageContainer driverIdcardImage">
+                                <div id="driver_idImageLoader" class="imageContainer driverIdcardImage">
 
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mb-3">
-                                <div class="imageContainer driverLiacenImage">
+                                <div id="driver_licenseImageLoader" class="imageContainer driverLiacenImage">
 
                                 </div>
                             </div>
@@ -3614,18 +3626,30 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="add_form_driverNic">Driver NIC</h5>
+                <h5 class="modal-title" id="addDriverForm">Add driver form</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="container">
+
+                    <!--first row itemCode-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="add_form_DriverNic" class="form-label">Driver NIC:</label>
+                                <input type="text" class="form-control" id="add_form_DriverNic" placeholder="Charith Wishvajith">
+                                <p><small class="text-danger  pl-1" id="lbldrivtaddeNic"></small></p>
+                            </div>
+                        </div>
+                    </div>
+
                     <!--first row itemCode-->
                     <div class="row">
                         <div class="col">
                             <div class="mb-3">
                                 <label for="update_form_DriverName" class="form-label">Driver Name:</label>
                                 <input type="text" class="form-control" id="add_form_DriverName" placeholder="Charith Wishvajith">
-                                <p><small class="text-danger  pl-1" id="lbldrivtaddeNic"></small></p>
+                                <p><small class="text-danger  pl-1" id="lbldrivtaddeName"></small></p>
                             </div>
                         </div>
                     </div>
@@ -3717,5 +3741,6 @@
 <script src="assests/script/CustomerForm.js"></script>
 <script src="assests/script/AdminHome.js"></script>
 <script src="assests/script/CarForm.js"></script>
+<script src="assests/script/DriverForm.js"></script>
 </body>
 </html>
