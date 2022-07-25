@@ -1,6 +1,6 @@
 body{
     font-family: 'Manrope', sans-serif;
-    color: rgba(112, 121, 142, 0.97);
+    color: rgb(157, 157, 173);
     font-weight: 600;
 }
 
@@ -215,9 +215,32 @@ body{
     padding-right: 1.4rem;
     padding-left: 1.4rem;
 }
+.homePage_car_container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.homePage_card{
+    width: 18.5rem;
+    margin: 0.2rem;
+    height: 23rem;
+}
+
 .car_container{
     display: flex;
     flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
 }
 .cust_pro_reservation_loading_content{
     padding-right: 0.8rem;
@@ -227,6 +250,18 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.Cardbox{
+    width: 18.5rem;
+    margin: 0.2rem;
+    height: 23rem;
+    margin-bottom: 0.8rem;
+}
+
+.customerPage_image_container{
+    height: 11rem;
+}
+
 .cord_content{
     display: flex;
     text-align: left;
@@ -287,7 +322,6 @@ body{
 
 .resCarImagageContainer{
     height: 12rem;
-    width:12rem;
     background-color: #0dcaf0;
     margin: 0.4rem;
 }

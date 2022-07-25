@@ -70,3 +70,20 @@ $("#btnbacktoHomeFromCustomerRegistration").click(function () {
     $("#adminCustomerManagementPage").css("display", "none");
     $("#adminDriverScheduleManagementPage").css("display", "none");
 })
+
+/*$("#guestUserHomePage").css("display", "none");
+$("#guestUserHomePageNavBar").css("display", "none");
+$("#loginPage").css("display", "none");
+$("#customerRegisterPage").css("display", "none");
+$("#customerProfilePage").css("display", "block");
+$("#customerProfilePageNavBar").css("display", "block");
+$("#driverscheduelePage").css("display", "none");
+$("#DriverPageNavBar").css("display", "none");
+$("#adminHomePage").css("display", "none");
+$("#adminNavBar").css("display", "none");
+$("#adminReservationManagementPage").css("display", "none");
+$("#adminCarManagementPage").css("display", "none");
+$("#adminDriverManagementPage").css("display", "none");
+$("#adminCustomerManagementPage").css("display", "none");
+$("#adminDriverScheduleManagementPage").css("display", "none");*/
+
