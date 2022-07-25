@@ -57,6 +57,8 @@ $("#btn_login_button").click(function () {
                     "height": "14rem"
                 });
 
+                loadAllReservations();
+
             } else if (role == "Driver") {
                 $("#guestUserHomePage").css("display", "none");
                 $("#guestUserHomePageNavBar").css("display", "none");

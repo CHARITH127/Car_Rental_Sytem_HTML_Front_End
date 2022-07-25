@@ -69,7 +69,6 @@ $("#btnCustomerFormLogOut").click(function () {
 
 var custoemerIdPhotoName = "";
 var custoemerLicensePhotoName = "";
-
 $("#btn_cust_pro_edit").click(function () {
 
     var custId = $("#cust_pro_customer_nic").val();
@@ -239,7 +238,7 @@ $("#custProfSearch").click(function () {
 
 
                 $(".reserve").click(function () {
-                    let carID=$(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().find('.customerPage_image_container').attr('id');
+                    let carID = $(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().find('.customerPage_image_container').attr('id');
                     console.log(carID);
                     loadCarDetailsToTheReservationModel(carID);
                 });
@@ -261,6 +260,90 @@ $("#custProfSearch").click(function () {
 
 })
 
+
+function loadAllReservations() {
+
+    let cId = $("#cust_pro_customer_nic").val()
+
+    $.ajax({
+        url: "http://localhost:8080/CarRentalSystem_war_exploded/reservation?cId=" + cId,
+        method: 'get',
+        async: true,
+        contentType: false,
+        processData: false,
+        success: function (resp) {
+            $(".custPro_riservation_container").empty();
+            var dynamic = document.querySelector('.custPro_riservation_container');
+            for (const resv of resp.data) {
+                var fetch = document.querySelector('.custPro_riservation_container').innerHTML;
+                dynamic.innerHTML = `<div class="row" style="padding: 0.8rem">
+                                    <div class="card" style=" margin-top: 1.4rem">
+                                        <div class="cord_content card-body">
+                                            <div class="row" style="margin: 0;padding: 0">
+                                                <div class="col" style="padding-right: 0">
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
+                                                                <span>Reservation Id</span>
+                                                                <p class="reservation_Id">${resv.reservation_id}</p>
+                                                                <span>Pickup date</span>
+                                                                <p class="reservation_pickup">${resv.pick_up_date}</p>
+                                                                <span>Return date</span>
+                                                                <p class="reservation_return">${resv.return_date}</p>
+                                                                <div class="revertaion_details_cover">
+                                                                    <span>Reservation status</span>
+                                                                    <p class="reservation_status">
+                                                                        ${resv.reservation_status}</p>
+                                                                </div>
+                                                                <div class="revertaion_details_cover">
+                                                                    <span>Driver status</span>
+                                                                    <p class="reservation_status">
+                                                                        ${resv.driverStatus}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col" style="padding-right: 0">
+                                                            <div class="row"
+                                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
+                                                                <div class="col">
+                                                                    <div class="btnreservation_container">
+                                                                        <button type="button" class="btncustPro_res_view btn btn-primary"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#viewReserVationModel">
+                                                                            View
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>` + fetch;
+
+
+                $(".btncustPro_res_view").click(function () {
+                    let resId = $(this).parent().parent().parent().parent().parent().parent().find('.reservation_Id').text();
+                    losdSlldetsildToViewReservationForm(resId);
+                    console.log(resId);
+                });
+
+
+            }
+
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+}
+
 /*put a reservaion*/
 $("#btn_Reserve").click(function () {
     setAReservation();
@@ -269,7 +352,7 @@ $("#btn_Reserve").click(function () {
 
 function loadCarDetailsToTheReservationModel(carID) {
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war_exploded/car?id="+carID,
+        url: "http://localhost:8080/CarRentalSystem_war_exploded/car?id=" + carID,
         method: 'get',
         success: function (resp) {
 
@@ -287,10 +370,10 @@ function loadCarDetailsToTheReservationModel(carID) {
             $("#res_form_carLossPayment").val(resp.data.lossPayment)
 
 
-            let frontImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/"+resp.data.imageDetails.frontImage;
-            let backImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/"+resp.data.imageDetails.backImage;
-            let sideImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/"+resp.data.imageDetails.sideImage;
-            let interiorImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/"+resp.data.imageDetails.interiorImage;
+            let frontImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/" + resp.data.imageDetails.frontImage;
+            let backImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/" + resp.data.imageDetails.backImage;
+            let sideImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/" + resp.data.imageDetails.sideImage;
+            let interiorImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/" + resp.data.imageDetails.interiorImage;
 
             $("#resevation_frontImage").css({
                 "background": `url(${frontImage})`,
@@ -319,7 +402,7 @@ function loadCarDetailsToTheReservationModel(carID) {
             var day = ("0" + now.getDate()).slice(-2);
             var month = ("0" + (now.getMonth() + 1)).slice(-2);
 
-            var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+            var today = now.getFullYear() + "-" + (month) + "-" + (day);
 
             $('#resform_today_date').val(today);
 
@@ -334,6 +417,75 @@ function loadCarDetailsToTheReservationModel(carID) {
             genarateReservationId();
 
 
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+}
+
+function losdSlldetsildToViewReservationForm(resId) {
+
+    $.ajax({
+        url: "http://localhost:8080/CarRentalSystem_war_exploded/reservation?id=" + resId,
+        method: 'get',
+        async: true,
+        contentType: false,
+        processData: false,
+        success: function (resp) {
+            if (resp.data.driverStatus == "Yes") {
+                loadReservationdetailsWithDrive(resId,resp.data.car.number,resp.data.reserve_date,resp.data.pick_up_and_return_venue)
+            }else {
+                loadReservationDetailsWithoutDriver(resId);
+            }
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+}
+
+function loadReservationdetailsWithDrive(resId,carNumber,reserve_date,pick_up_and_return_venue) {
+    $.ajax({
+        url: "http://localhost:8080/CarRentalSystem_war_exploded/driver?resId=" + resId,
+        method: 'get',
+        async: true,
+        contentType: false,
+        processData: false,
+        success: function (resp) {
+            $("#res_view_form_carNumber").val(carNumber);
+            $("#res_viewform_today_date").val(reserve_date);
+            $("#res_view_form_resID").val(resId);
+            $("#res_view_form_pickupandReturnLocation").val(pick_up_and_return_venue);
+            $("#res_viewform_Driver_Status").val("Yes");
+            $("#res_viewform_check_in_date").val(resp.data.pick_up_date);
+            $("#res_viewform_check_in_time").val(resp.data.pick_up_time);
+            $("#res_viewform_return_date").val(resp.data.return_date);
+            $("#res_viewform_Driver_Nic").val(resp.data.driver.driverNic);
+        },
+        error: function (err) {
+            console.log(err);
+        }
+    });
+}
+
+function loadReservationDetailsWithoutDriver(resId) {
+    $.ajax({
+        url: "http://localhost:8080/CarRentalSystem_war_exploded/reservation?id=" + resId,
+        method: 'get',
+        async: true,
+        contentType: false,
+        processData: false,
+        success: function (resp) {
+            $("#res_view_form_carNumber").val(resp.data.car.number);
+            $("#res_viewform_today_date").val(resp.data.reserve_date);
+            $("#res_view_form_resID").val(resp.data.reservation_id);
+            $("#res_view_form_pickupandReturnLocation").val(resp.data.pick_up_and_return_venue);
+            $("#res_viewform_Driver_Status").val("No");
+            $("#res_viewform_check_in_date").val(resp.data.pick_up_date);
+            $("#res_viewform_check_in_time").val(resp.data.pick_up_time);
+            $("#res_viewform_return_date").val(resp.data.return_date);
+            $("#res_viewform_Driver_Nic").val("---");
         },
         error: function (err) {
             console.log(err);
@@ -383,7 +535,7 @@ function setAReservation() {
     let res_pickUp_date = $("#resform_check_in_date").val();
     let res_return_date = $("#resform_return_date").val();
     let res_pickup_venue = $("#resform_return_date").val();
-    let res_driver_status =$('input[name="reservation_driverSelection"]:checked').val();
+    let res_driver_status = $('input[name="reservation_driverSelection"]:checked').val();
 
     let bankSlipPhoto = "";
     let bankSlipPhotoname = "";
@@ -395,23 +547,22 @@ function setAReservation() {
     }
 
 
-
     var reservationDTO = {
-        reservation_id:res_id,
-        customer:{
-            customerNic:res_cust_nic
+        reservation_id: res_id,
+        customer: {
+            customerNic: res_cust_nic
         },
-        car:{
-            number:res_car_number
+        car: {
+            number: res_car_number
         },
-        reserve_date:res_reserve_date,
-        pick_up_time:res_pickUp_time,
-        pick_up_date:res_pickUp_date,
-        return_date:res_return_date,
-        driverStatus:res_driver_status,
-        pick_up_and_return_venue:res_pickup_venue,
-        reservation_status:"pending",
-        bankSlip:bankSlipPhotoname,
+        reserve_date: res_reserve_date,
+        pick_up_time: res_pickUp_time,
+        pick_up_date: res_pickUp_date,
+        return_date: res_return_date,
+        driverStatus: res_driver_status,
+        pick_up_and_return_venue: res_pickup_venue,
+        reservation_status: "pending",
+        bankSlip: bankSlipPhotoname,
     }
 
     data.append("files", bankSlipPhoto);
