@@ -91,6 +91,15 @@ $("#btn_login_button").click(function () {
                 $("#adminDriverManagementPage").css("display", "none");
                 $("#adminCustomerManagementPage").css("display", "none");
                 $("#adminDriverScheduleManagementPage").css("display", "none");
+
+                getWeaklyIncome()
+                setTodayIncome()
+                setMonthlyIncome()
+                setYearlyIncome()
+                setOccupiedDrivers()
+                setAvailableDrivers()
+                setAvailableCars()
+                setOccupiedCars()
             } else {
                 alert("login access denied");
             }

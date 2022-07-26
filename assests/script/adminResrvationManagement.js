@@ -26,7 +26,7 @@ $("#btn_admin_declineReservation").click(function () {
 
     if ($("#reservationUpdate_form_reservationStatus").val() == "pending" || $("#reservationUpdate_form_reservationStatus").val() == "accept") {
         alert("Please give the reason to customer why are tou decline this");
-    }else {
+    } else {
         declineAReservationRequest();
     }
 
@@ -35,25 +35,25 @@ $("#btn_admin_declineReservation").click(function () {
 function declineAReservationRequest() {
     let resId = $("#Reservationidsearch").val()
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war_exploded/reservation?id="+resId,
+        url: "http://localhost:8080/CarRentalSystem_war_exploded/reservation?id=" + resId,
         method: "GET",
         success: function (resp) {
             let reservationDTO = {
-                reservation_id : resId,
-                customer:{
-                    customerNic:resp.data.customer.customerNic
+                reservation_id: resId,
+                customer: {
+                    customerNic: resp.data.customer.customerNic
                 },
-                car:{
-                    number:resp.data.car.number
+                car: {
+                    number: resp.data.car.number
                 },
-                reserve_date:resp.data.reserve_date,
-                pick_up_date:resp.data.pick_up_date,
-                return_date:resp.data.return_date,
-                pick_up_time:resp.data.pick_up_time,
-                pick_up_and_return_venue:resp.data.pick_up_and_return_venue,
-                reservation_status:$("#reservationUpdate_form_reservationStatus").val(),
-                driverStatus:resp.data.driverStatus,
-                bankSlip:resp.data.bankSlip,
+                reserve_date: resp.data.reserve_date,
+                pick_up_date: resp.data.pick_up_date,
+                return_date: resp.data.return_date,
+                pick_up_time: resp.data.pick_up_time,
+                pick_up_and_return_venue: resp.data.pick_up_and_return_venue,
+                reservation_status: $("#reservationUpdate_form_reservationStatus").val(),
+                driverStatus: resp.data.driverStatus,
+                bankSlip: resp.data.bankSlip,
             }
 
             updateReservationRequest(reservationDTO);
@@ -65,25 +65,25 @@ function declineAReservationRequest() {
 function setAcceptReservation() {
     let resId = $("#Reservationidsearch").val()
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war_exploded/reservation?id="+resId,
+        url: "http://localhost:8080/CarRentalSystem_war_exploded/reservation?id=" + resId,
         method: "GET",
         success: function (resp) {
             let reservationDTO = {
-                reservation_id : resId,
-                customer:{
-                    customerNic:resp.data.customer.customerNic
+                reservation_id: resId,
+                customer: {
+                    customerNic: resp.data.customer.customerNic
                 },
-                car:{
-                    number:resp.data.car.number
+                car: {
+                    number: resp.data.car.number
                 },
-                reserve_date:resp.data.reserve_date,
-                pick_up_date:resp.data.pick_up_date,
-                return_date:resp.data.return_date,
-                pick_up_time:resp.data.pick_up_time,
-                pick_up_and_return_venue:resp.data.pick_up_and_return_venue,
-                reservation_status:"accept",
-                driverStatus:resp.data.driverStatus,
-                bankSlip:resp.data.bankSlip,
+                reserve_date: resp.data.reserve_date,
+                pick_up_date: resp.data.pick_up_date,
+                return_date: resp.data.return_date,
+                pick_up_time: resp.data.pick_up_time,
+                pick_up_and_return_venue: resp.data.pick_up_and_return_venue,
+                reservation_status: "accept",
+                driverStatus: resp.data.driverStatus,
+                bankSlip: resp.data.bankSlip,
             }
 
             updateReservationRequest(reservationDTO);
@@ -98,7 +98,7 @@ function updateReservationRequest(reservationDTO) {
         method: "put",
         contentType: "application/json",
         data: JSON.stringify(reservationDTO),
-        success:function (res) {
+        success: function (res) {
             alert(res.message)
             loadAllReserbvations();
         }
@@ -132,7 +132,7 @@ function loadTodayReservations() {
 
     $(".resevation_management_table_body").empty();
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war_exploded/reservation?todayDate="+today,
+        url: "http://localhost:8080/CarRentalSystem_war_exploded/reservation?todayDate=" + today,
         method: "GET",
         success: function (resp) {
             for (const res of resp.data) {
@@ -147,7 +147,7 @@ function loadTodayReservations() {
 function loadReservationDetailsToUpdate() {
     let resId = $("#Reservationidsearch").val()
     $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war_exploded/reservation?id="+resId,
+        url: "http://localhost:8080/CarRentalSystem_war_exploded/reservation?id=" + resId,
         method: "GET",
         success: function (resp) {
             $("#reservationUpdate_form_resId").val(resp.data.reservation_id)

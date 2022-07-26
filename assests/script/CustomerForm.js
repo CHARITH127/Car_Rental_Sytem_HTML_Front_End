@@ -244,7 +244,7 @@ $("#custProfSearch").click(function () {
                 });
 
 
-                $(".customerPage_image_container").css({
+                $(`#${car.number}`).css({
                     "background": `url('http://localhost:8080/CarRentalSystem_war_exploded/uploads/${car.imageDetails.frontImage}')`,
                     "background-size": "cover",
                     "height": "10rem"
