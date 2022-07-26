@@ -508,23 +508,6 @@ function genarateReservationId() {
 }
 
 function setAReservation() {
-    /*{
-        "reservation_id": "R-002",
-        "customer":{
-        "customerNic":"1231"
-        },
-        "car": {
-        "number":"124"
-        },
-        "reserve_date":"2022-07-03",
-        "pick_up_time":"03:20:33",
-        "pick_up_date": "2022-07-10",
-        "return_date": "2022-07-12",
-        "driverStatus": "No",
-        "pick_up_and_return_venue":"Gampaha",
-        "reservation_status":"pending",
-        "bankSlip": "file4Name.jpg"
-    }*/
 
     var data = new FormData();
     let res_id = $("#res_form_resID").val();
