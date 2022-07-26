@@ -75,6 +75,8 @@ $("#btn_login_button").click(function () {
                 $("#adminDriverManagementPage").css("display", "none");
                 $("#adminCustomerManagementPage").css("display", "none");
                 $("#adminDriverScheduleManagementPage").css("display", "none");
+                loadWeeklySchedule(user_name)
+
             } else if (role == "Admin") {
                 $("#guestUserHomePage").css("display", "none");
                 $("#guestUserHomePageNavBar").css("display", "none");

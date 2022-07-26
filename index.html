@@ -39,7 +39,7 @@
     <!--driver nav bar start-->
     <nav id="DriverPageNavBar" class="navbar bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand">Admin Profile. </a>
+            <a class="navbar-brand">Driver Profile. </a>
             <form class="d-flex" role="search">
                 <button id="btndriverLogOut" class="btn btn-outline-primary" type="Button">Log out</button>
             </form>
@@ -779,7 +779,13 @@
 <!--driver shedule start-->
 <div id="driverscheduelePage">
     <div class="driver_schedule_container">
-        <table class="table">
+        <div class="d-flex flex-row mb-3">
+            <div class="form-floating mb-3">
+                <input disabled type="text" class="form-control" id="driverPage_driverNIC" placeholder="name@example.com">
+                <label for="driverPage_driverNIC">Driver Nic</label>
+            </div>
+        </div>
+        <table class="driver_page_table table">
             <thead>
             <tr>
                 <th scope="col">Shedule ID</th>
@@ -789,27 +795,7 @@
                 <th scope="col">Reservation ID</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-            </tr>
+            <tbody class="driver_page_table_body">
             </tbody>
         </table>
     </div>
@@ -3715,5 +3701,6 @@
 <script src="assests/script/billingForm.js"></script>
 <script src="assests/script/incomeSummery.js"></script>
 <script src="assests/script/GuestUSerHomePage.js"></script>
+<script src="assests/script/driverSchedule.js"></script>
 </body>
 </html>

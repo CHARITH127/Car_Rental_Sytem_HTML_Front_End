@@ -172,10 +172,11 @@ $("#custProfSearch").click(function () {
             $(".car_container").empty();
             var dynamic = document.querySelector('.car_container');
             for (const car of resp.data) {
+                console.log(car.number)
                 var fetch = document.querySelector('.car_container').innerHTML;
                 dynamic.innerHTML = ` <div class="Cardbox">
                                     <div class="customerFormCard card" style=" margin-top: 1.4rem">
-                                        <div id="${car.number}" class="customerPage_image_container">
+                                        <div id="card${car.number}" class="customerPage_image_container">
                                             
                                         </div>
                                         <div class="cord_content card-body">
@@ -244,8 +245,8 @@ $("#custProfSearch").click(function () {
                 });
 
 
-                $(`#${car.number}`).css({
-                    "background": `url('http://localhost:8080/CarRentalSystem_war_exploded/uploads/${car.imageDetails.frontImage}')`,
+                $(`#card${car.number}`).css({
+                    "background":`url('http://localhost:8080/CarRentalSystem_war_exploded/uploads/${car.imageDetails.frontImage}')`,
                     "background-size": "cover",
                     "height": "10rem"
                 });
@@ -434,8 +435,8 @@ function losdSlldetsildToViewReservationForm(resId) {
         processData: false,
         success: function (resp) {
             if (resp.data.driverStatus == "Yes") {
-                loadReservationdetailsWithDrive(resId,resp.data.car.number,resp.data.reserve_date,resp.data.pick_up_and_return_venue)
-            }else {
+                loadReservationdetailsWithDrive(resId, resp.data.car.number, resp.data.reserve_date, resp.data.pick_up_and_return_venue)
+            } else {
                 loadReservationDetailsWithoutDriver(resId);
             }
         },
@@ -445,7 +446,7 @@ function losdSlldetsildToViewReservationForm(resId) {
     });
 }
 
-function loadReservationdetailsWithDrive(resId,carNumber,reserve_date,pick_up_and_return_venue) {
+function loadReservationdetailsWithDrive(resId, carNumber, reserve_date, pick_up_and_return_venue) {
     $.ajax({
         url: "http://localhost:8080/CarRentalSystem_war_exploded/driver?resId=" + resId,
         method: 'get',
