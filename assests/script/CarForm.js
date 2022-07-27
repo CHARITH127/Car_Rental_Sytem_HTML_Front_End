@@ -113,26 +113,11 @@ $("#updateCar").click(function () {
             let sideImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/"+resp.data.imageDetails.sideImage;
             let interiorImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/"+resp.data.imageDetails.interiorImage;
 
-            $("#update_car_frontImage").css({
-                "background": `url(${frontImage})`,
-                "background-size": "cover",
-                "height": "12rem"
-            });
-            $("#update_car_backImage").css({
-                "background": `url(${backImage})`,
-                "background-size": "cover",
-                "height": "12rem"
-            });
-            $("#update_car_sideImage").css({
-                "background": `url(${sideImage})`,
-                "background-size": "cover",
-                "height": "12rem"
-            });
-            $("#update_car_interiorImage").css({
-                "background": `url(${interiorImage})`,
-                "background-size": "cover",
-                "height": "12rem"
-            });
+
+            $("#car_update_frontImage").attr("src",frontImage)
+            $("#car_update_sideImage").attr("src",sideImage)
+            $("#car_update_backImage").attr("src",backImage)
+            $("#car_update_interiorImage").attr("src",interiorImage)
 
 
         },

@@ -82,7 +82,7 @@ function setAvailableDrivers() {
             }
         }
     });*/
-    $(".available_driver_count_driver_count").text("6");
+    $(".available_driver_count_driver_count").text('6');
 }
 
 function setAvailableCars() {

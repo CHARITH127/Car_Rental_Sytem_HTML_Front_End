@@ -86,6 +86,48 @@
     </nav>
     <!--admin nav bar end-->
 </header>
+
+<div id="landingPage">
+    <div class="hero">
+        <div class="row">
+            <div class="left-sec">
+                <div class="content">
+                    <h2><span>Easy Car Rental</span><br> Private Limited.</h2>
+                    <p>select the right choise..</p>
+                </div>
+                <button id="starting" class="btnwelcome">
+                    Get ready to go
+                </button>
+                <div class="right-sec">
+                    <div class="my-car">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assests/images/homePage/audi1-removebg-preview.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assests/images/homePage/chavalot2-removebg-preview.png" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assests/images/homePage/benz1-removebg-preview.png" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--Gust Home page start -->
 <div id="guestUserHomePage">
     <!--home page content start-->
@@ -162,231 +204,6 @@
             </div>
             <div class="carloading_container">
                 <div class="homePage_car_container row" style="margin-right: 0">
-                    <!--<div class="homePage_card card" style=" margin-top: 1.4rem">
-                        <div style="height:11rem ; background-color: #0a58ca ; margin-top: 0.8rem">
-
-                        </div>
-                        <div class="cord_content card-body">
-                            <div class="row" style="margin: 0;padding: 0">
-                                <div class="col" style="padding-right: 0">
-                                    <div class="row">
-                                        <div class="col" style="padding-right: 0">
-                                            <div class="row"
-                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
-                                                <p class="car_type">Luxury</p>
-                                                <p class="car_brand">Audi A4</p>
-                                                <div class="details_cover">
-                                                    <p class="car_fuel">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                             width="16" height="16" fill="currentColor"
-                                                             class="bi bi-fuel-pump-fill"
-                                                             viewBox="0 0 16 16">
-                                                            <path d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336.383.228.634.551.794.907.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z"/>
-                                                        </svg>
-                                                        Petrol
-                                                    </p>
-                                                    <p class="car_transmission">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                             fill="currentColor" class="bi bi-gear-fill"
-                                                             viewBox="0 0 16 16">
-                                                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                                                        </svg>
-                                                        Auto
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col" style="padding-right: 0">
-                                            <div class="row"
-                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
-                                                <div class="col" style="padding: 0">
-                                                    <div class="daily_price">Rs : <p class="price">
-                                                        5200/=</p></div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="btnreservation_container">
-                                                        <button type="button" class="btn_gustuser_home  btn btn-primary">
-                                                            Reserve
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
-                    <!--div class="homePage_card card" style=" margin-top: 1.4rem">
-                        <img src="assests/images/Cars/Audi.png" class="card-img-top" alt="...">
-                        <div class="cord_content card-body">
-                            <div class="row" style="margin: 0;padding: 0">
-                                <div class="col" style="padding-right: 0">
-                                    <div class="row">
-                                        <div class="col" style="padding-right: 0">
-                                            <div class="row"
-                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
-                                                <p class="car_type">Luxury</p>
-                                                <p class="car_brand">Audi A4</p>
-                                                <div class="details_cover">
-                                                    <p class="car_fuel">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                             width="16" height="16" fill="currentColor"
-                                                             class="bi bi-fuel-pump-fill"
-                                                             viewBox="0 0 16 16">
-                                                            <path d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336.383.228.634.551.794.907.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z"/>
-                                                        </svg>
-                                                        Petrol
-                                                    </p>
-                                                    <p class="car_transmission">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                             fill="currentColor" class="bi bi-gear-fill"
-                                                             viewBox="0 0 16 16">
-                                                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                                                        </svg>
-                                                        Auto
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col" style="padding-right: 0">
-                                            <div class="row"
-                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
-                                                <div class="col" style="padding: 0">
-                                                    <div class="daily_price">Rs : <p class="price">
-                                                        5200/=</p></div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="btnreservation_container">
-                                                        <button type="button" class="btn btn-primary"
-                                                                data-bs-toggle="modal" data-bs-target="#customerUpdate">
-                                                            Reserve
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="homePage_card card" style=" margin-top: 1.4rem">
-                        <img src="assests/images/Cars/Audi.png" class="card-img-top" alt="...">
-                        <div class="cord_content card-body">
-                            <div class="row" style="margin: 0;padding: 0">
-                                <div class="col" style="padding-right: 0">
-                                    <div class="row">
-                                        <div class="col" style="padding-right: 0">
-                                            <div class="row"
-                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
-                                                <p class="car_type">Luxury</p>
-                                                <p class="car_brand">Audi A4</p>
-                                                <div class="details_cover">
-                                                    <p class="car_fuel">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                             width="16" height="16" fill="currentColor"
-                                                             class="bi bi-fuel-pump-fill"
-                                                             viewBox="0 0 16 16">
-                                                            <path d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336.383.228.634.551.794.907.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z"/>
-                                                        </svg>
-                                                        Petrol
-                                                    </p>
-                                                    <p class="car_transmission">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                             fill="currentColor" class="bi bi-gear-fill"
-                                                             viewBox="0 0 16 16">
-                                                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                                                        </svg>
-                                                        Auto
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col" style="padding-right: 0">
-                                            <div class="row"
-                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
-                                                <div class="col" style="padding: 0">
-                                                    <div class="daily_price">Rs : <p class="price">
-                                                        5200/=</p></div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="btnreservation_container">
-                                                        <button type="button" class="btn btn-primary"
-                                                                data-bs-toggle="modal" data-bs-target="#customerUpdate">
-                                                            Reserve
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="homePage_card card" style=" margin-top: 1.4rem">
-                        <img src="assests/images/Cars/Audi.png" class="card-img-top" alt="...">
-                        <div class="cord_content card-body">
-                            <div class="row" style="margin: 0;padding: 0">
-                                <div class="col" style="padding-right: 0">
-                                    <div class="row">
-                                        <div class="col" style="padding-right: 0">
-                                            <div class="row"
-                                                 style="width: 100%;height:fit-content;margin-bottom: .4rem">
-                                                <p class="car_type">Luxury</p>
-                                                <p class="car_brand">Audi A4</p>
-                                                <div class="details_cover">
-                                                    <p class="car_fuel">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                             width="16" height="16" fill="currentColor"
-                                                             class="bi bi-fuel-pump-fill"
-                                                             viewBox="0 0 16 16">
-                                                            <path d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336.383.228.634.551.794.907.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z"/>
-                                                        </svg>
-                                                        Petrol
-                                                    </p>
-                                                    <p class="car_transmission">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                             fill="currentColor" class="bi bi-gear-fill"
-                                                             viewBox="0 0 16 16">
-                                                            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                                                        </svg>
-                                                        Auto
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col" style="padding-right: 0">
-                                            <div class="row"
-                                                 style="width: 100%;height: fit-content;margin-bottom: .4rem">
-                                                <div class="col" style="padding: 0">
-                                                    <div class="daily_price">Rs : <p class="price">
-                                                        5200/=</p></div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="btnreservation_container">
-                                                        <button type="button" class="btn btn-primary"
-                                                                data-bs-toggle="modal" data-bs-target="#customerUpdate">
-                                                            Reserve
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
                 </div>
             </div>
         </div>
@@ -781,7 +598,8 @@
     <div class="driver_schedule_container">
         <div class="d-flex flex-row mb-3">
             <div class="form-floating mb-3">
-                <input disabled type="text" class="form-control" id="driverPage_driverNIC" placeholder="name@example.com">
+                <input disabled type="text" class="form-control" id="driverPage_driverNIC"
+                       placeholder="name@example.com">
                 <label for="driverPage_driverNIC">Driver Nic</label>
             </div>
         </div>
@@ -921,7 +739,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Occupied Drives</h5>
                                     <div class="count_container">
-                                        <p class="occupied_driver_count"> 50000</p>
+                                        <p class="occupied_driver_count"> 1</p>
                                     </div>
                                 </div>
                             </div>
@@ -937,7 +755,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Available Drives</h5>
                                     <div class="count_container">
-                                        <p class="available_driver_count"> 50000</p>
+                                        <p class="available_driver_count"> 5</p>
                                     </div>
                                 </div>
                             </div>
@@ -1780,7 +1598,8 @@
                             <div class="mb-3">
                                 <label for="update_form_driverSchedulePickupdate" class="form-label">Pick up
                                     date:</label>
-                                <input disabled type="text" class="form-control" id="update_form_driverSchedulePickupdate"
+                                <input disabled type="text" class="form-control"
+                                       id="update_form_driverSchedulePickupdate"
                                        placeholder="Gampaha">
                                 <p><small class="text-danger  pl-1" id="lblupdatedriverSchedulePickupDate"></small></p>
                             </div>
@@ -1793,7 +1612,8 @@
                             <div class="mb-3">
                                 <label for="update_form_driverSchedulePickuptime" class="form-label">Pick up
                                     time:</label>
-                                <input disabled type="text" class="form-control" id="update_form_driverSchedulePickuptime"
+                                <input disabled type="text" class="form-control"
+                                       id="update_form_driverSchedulePickuptime"
                                        placeholder="Charti127">
                                 <p><small class="text-danger  pl-1" id="lblupdatedriverSchedulepickuptime"></small></p>
                             </div>
@@ -1806,7 +1626,8 @@
                             <div class="mb-3">
                                 <label for="update_form_driverScheduleReturndate" class="form-label">Return
                                     date:</label>
-                                <input disabled type="text" class="form-control" id="update_form_driverScheduleReturndate"
+                                <input disabled type="text" class="form-control"
+                                       id="update_form_driverScheduleReturndate"
                                        placeholder="0123412110">
                                 <p><small class="text-danger  pl-1" id="lblupdatedriverScheduleReturndate"></small></p>
                             </div>
@@ -1831,7 +1652,8 @@
                             <div class="mb-3">
                                 <label for="update_form_driverScheduleReservationId" class="form-label">Reservation
                                     Id:</label>
-                                <input disabled type="text" class="form-control" id="update_form_driverScheduleReservationId"
+                                <input disabled type="text" class="form-control"
+                                       id="update_form_driverScheduleReservationId"
                                        placeholder="0123412110">
                                 <p><small class="text-danger  pl-1" id="lblupdatedriverScheduleReservationId"></small>
                                 </p>
@@ -2100,26 +1922,43 @@
             </div>
             <div class="modal-body">
                 <div class="d-flex flex-row mb-3">
-                    <div class="p-2 flex-fill">
-                        <div id="update_car_frontImage" class="viewCarImageContainer">
-
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
                         </div>
-                    </div>
-                    <div class="p-2 flex-fill">
-                        <div id="update_car_backImage" class="viewCarImageContainer">
-
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id="car_update_frontImage" src="" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="car_update_sideImage" src="" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="car_update_backImage" src="" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="car_update_interiorImage" src="" class="d-block w-100" alt="...">
+                            </div>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="p-2 flex-fill">
-                        <div id="update_car_sideImage" class="viewCarImageContainer">
 
-                        </div>
-                    </div>
-                    <div class="p-2 flex-fill">
-                        <div id="update_car_interiorImage" class="viewCarImageContainer">
-
-                        </div>
-                    </div>
                 </div>
                 <div class="d-flex">
                     <div class="p-2 flex-fill">
@@ -2568,16 +2407,51 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="d-flex">
-                                            <div id="resevation_frontImage"
-                                                 class="resCarImagageContainer p-2 flex-fill"></div>
-                                            <div id="resevation_BackImage"
-                                                 class="resCarImagageContainer p-2 flex-fill"></div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div id="resevation_sideImage"
-                                                 class="resCarImagageContainer p-2 flex-fill"></div>
-                                            <div id="resevation_interiorImage"
-                                                 class="resCarImagageContainer p-2 flex-fill"></div>
+
+                                            <div id="carouselExampleIndicators1" class="carousel slide"
+                                                 data-bs-ride="true">
+                                                <div class="carousel-indicators">
+                                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                            data-bs-slide-to="0" class="active" aria-current="true"
+                                                            aria-label="Slide 1"></button>
+                                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                            data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                            data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                                </div>
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img id="resevation_frontImage" height="300" src=""
+                                                             class="d-block w-100" alt="...">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img id="resevation_BackImage" height="300" src=""
+                                                             class="d-block w-100" alt="...">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img id="resevation_sideImage" height="300" src=""
+                                                             class="d-block w-100" alt="...">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img id="resevation_interiorImage" height="300" src=""
+                                                             class="d-block w-100" alt="...">
+                                                    </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button"
+                                                        data-bs-target="#carouselExampleIndicators1"
+                                                        data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button"
+                                                        data-bs-target="#carouselExampleIndicators1"
+                                                        data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                     <!--first row itemCode-->
@@ -3197,7 +3071,8 @@
                         <div class="view_textFlield_container">
                             <div class="mb-3">
                                 <label for="billing_full_payment" class="form-label">Refund payment:</label>
-                                <input type="text" class="form-control" id="billing_refund_payment" placeholder="1231231">
+                                <input type="text" class="form-control" id="billing_refund_payment"
+                                       placeholder="1231231">
                                 <p><small class="text-danger  pl-1" id="lblbillingrefundPayment"></small></p>
                             </div>
                         </div>
@@ -3205,7 +3080,8 @@
                     <div class="p-2 flex-fill">
                         <div class="view_textFlield_container">
                             <div class="mb-3">
-                                <button style="margin-top: 2rem" id="calculate_fullPayment" type="button" class="btn btn-primary">Calculate
+                                <button style="margin-top: 2rem" id="calculate_fullPayment" type="button"
+                                        class="btn btn-primary">Calculate
                                 </button>
                             </div>
                         </div>
@@ -3702,5 +3578,6 @@
 <script src="assests/script/incomeSummery.js"></script>
 <script src="assests/script/GuestUSerHomePage.js"></script>
 <script src="assests/script/driverSchedule.js"></script>
+<script src="assests/script/validations.js"></script>
 </body>
 </html>

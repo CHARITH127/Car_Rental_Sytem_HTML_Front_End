@@ -1,188 +1,278 @@
-body{
+body {
     font-family: 'Manrope', sans-serif;
     color: rgb(157, 157, 173);
     font-weight: 600;
 }
 
-
-.home_form_container{
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction:column;
-    height:94vh;
-    width:auto;
-    align-items:center;
-    justify-content:center;
+#landingPage{
+    background-color: #2a2c3f;
+    height: 100vh;
 }
 
-.content_container{
+.hero{
+    width: 100%;
+}
+
+.hero .row{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.hero .row .left-sec{
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.hero .row .left-sec h2{
+    font-size: 85px;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+.hero .row .left-sec h2 span{
+    color: #1776ED;
+}
+
+.hero .row .left-sec p{
+    margin: 20px 0;
+    color:#fff;
+    line-height: 28px;
+}
+
+.hero .row .left-sec .btnwelcome{
+    display: flex;
+    align-items: center;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 0 25px;
+    border: 3px solid #ffa938;
+    background-color: #1776ED ;
+    box-shadow: 5px 7px 20px #000;
+
+}
+
+.hero .right-sec{
+    width: 70%;
+    margin-left: 226px;
+}
+
+.hero .right-sec img{
+    width: 882px;
+    height: 417px;
+    margin: auto;
+    float: right;
+}
+
+.home_form_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 94vh;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_container {
     height: 97vh;
     width: 69rem;
-    padding-left:1.4rem;
-    padding-right:1.4rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
     padding-top: 1.4rem;
     display: flex;
     flex-direction: row;
 }
 
-.filter_container{
-    background-color:#e4e4e4;
-    padding-left:1.4rem;
-    padding-right:1.4rem;
-    width:23rem;
-    height:100%;
-    display:flex;
-    flex-direction:column;
+.filter_container {
+    background-color: #e4e4e4;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    width: 23rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-.carloading_container{
-    background-color:#e4e4e4;
-    padding-left:1.4rem;
-    width:42rem;
-    height:fit-content;
-    margin-left:1rem;
+
+.carloading_container {
+    background-color: #e4e4e4;
+    padding-left: 1.4rem;
+    width: 42rem;
+    height: fit-content;
+    margin-left: 1rem;
 }
-.pickup_container{
-    margin-top:3rem;
-    margin-right:0.4rem;
-    display:flex;
-    flex-direction:column;
+
+.pickup_container {
+    margin-top: 3rem;
+    margin-right: 0.4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.radio_button_form_container{
+
+.radio_button_form_container {
     padding-bottom: 0.8rem;
     padding-top: 0.8rem;
 }
-.radio_button_form_container span{
+
+.radio_button_form_container span {
     margin: 0;
     padding-bottom: 0.4rem;
 }
-.home_page_filterButton_container{
+
+.home_page_filterButton_container {
     padding-bottom: 0.8rem;
     padding-top: 0.8rem;
 }
 
-#guestUserHomePage{
-    display: block;
+#guestUserHomePage {
+    display: none;
 }
-#guestUserHomePageNavBar{
-    display: block;
+
+#guestUserHomePageNavBar {
+    display: none;
 }
+
 /*=============================================================================================================*/
 
-.form_container{
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction:column;
-    height:100vh;
-    width:100vw;
-    align-items:center;
-    justify-content:center;
-    background: rgb(74,0,240) linear-gradient(301deg, rgba(74,0,240,1) 13%, rgba(255,162,162,1) 77%);
+.form_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background: rgb(74, 0, 240) linear-gradient(301deg, rgba(74, 0, 240, 1) 13%, rgba(255, 162, 162, 1) 77%);
 }
-.login_cover{
-    height:55%;
+
+.login_cover {
+    height: 55%;
     width: 59%;
     background-color: #fff;
-    border-radius:2.3rem;
+    border-radius: 2.3rem;
     padding: 1.5rem;
 }
-.login_heading{
+
+.login_heading {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
 }
-.login_heading p{
+
+.login_heading p {
     margin: 0;
     font-size: 1.6rem;
     font-weight: 700;
     color: #1776ED;
 }
-.login_heading span{
+
+.login_heading span {
     color: rgba(123, 131, 151, 0.82);
     font-weight: 600;
 }
-.login_image_container{
-    height:25rem;
-    width:auto;
-    margin-right:0.4rem;
+
+.login_image_container {
+    height: 25rem;
+    width: auto;
+    margin-right: 0.4rem;
     border-radius: 1.5rem;
-    background-color:grey;
+    background-color: grey;
 }
-.login_image_container img{
+
+.login_image_container img {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
 }
-.login_form_container{
-    height:25rem;
-    width:auto;
-    margin-right:0.4rem;
+
+.login_form_container {
+    height: 25rem;
+    width: auto;
+    margin-right: 0.4rem;
     border-radius: 1.5rem;
 }
-.login_welcome_banner{
+
+.login_welcome_banner {
     margin-top: 0.6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.login_welcome_banner span:nth-child(1){
+
+.login_welcome_banner span:nth-child(1) {
     color: rgba(123, 131, 151, 0.82);
     font-weight: 600;
-    font-size:0.8rem;
+    font-size: 0.8rem;
 }
-.login_welcome_banner p:nth-child(2){
+
+.login_welcome_banner p:nth-child(2) {
     margin: 0;
     font-size: 1.6rem;
     font-weight: 700;
     color: #1776ED;
 }
-.login_welcome_banner span:nth-child(3){
+
+.login_welcome_banner span:nth-child(3) {
     color: rgba(123, 131, 151, 0.82);
     font-weight: 600;
-    font-size:0.8rem;
+    font-size: 0.8rem;
 }
-.login_welcome_banner span:nth-child(3) a{
+
+.login_welcome_banner span:nth-child(3) a {
     color: #1776ED;
     cursor: pointer;
 }
-.login_button_container p{
+
+.login_button_container p {
     margin-top: 1.4rem;
     font-size: 0.8rem;
 }
 
-.login_button_container p span{
+.login_button_container p span {
     color: #1776ED;
 }
-#loginPage{
+
+#loginPage {
     display: none;
 }
+
 /*=============================================================================================================*/
 
-.customer_registration_cover{
-    height:72%;
+.customer_registration_cover {
+    height: 72%;
     width: 59%;
     background-color: #fff;
-    border-radius:2.3rem;
+    border-radius: 2.3rem;
     padding: 1.2rem;
 }
-.customer_registration_heading_container{
+
+.customer_registration_heading_container {
     font-size: 1.4rem;
     font-weight: 600;
     color: rgba(123, 131, 151, 0.82);
 }
-.registerImageContainer img{
+
+.registerImageContainer img {
     width: 100%;
     height: 100%;
 }
-#customerRegisterPage{
+
+#customerRegisterPage {
     display: none;
 }
 
 /*=============================================================================================================*/
-.customer_register_form_container{
+.customer_register_form_container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -190,8 +280,9 @@ body{
     align-items: center;
     justify-content: center;
 }
-.customer_form_controller{
-   height: 57rem;
+
+.customer_form_controller {
+    height: 57rem;
     width: 86%;
     padding-left: 1.4rem;
     padding-right: 1.4rem;
@@ -201,21 +292,25 @@ body{
     display: flex;
     flex-direction: row;
 }
-.customer_proImage_loader{
+
+.customer_proImage_loader {
     height: 14rem;
     width: 100%;
     background-color: #0c4128;
 }
-.customer_register_detail_container{
-    height:100% ;
+
+.customer_register_detail_container {
+    height: 100%;
     padding-top: 0.8rem;
 }
-.cust_pro_car_loading_content{
+
+.cust_pro_car_loading_content {
     padding-top: 0.8rem;
     padding-right: 1.4rem;
     padding-left: 1.4rem;
 }
-.homePage_car_container{
+
+.homePage_car_container {
     display: flex;
     flex-direction: row;
     margin-left: 0;
@@ -226,13 +321,13 @@ body{
     flex-wrap: wrap;
 }
 
-.homePage_card{
+.homePage_card {
     width: 18.5rem;
     margin: 0.2rem;
     height: 23rem;
 }
 
-.car_container{
+.car_container {
     display: flex;
     flex-direction: row;
     margin-left: 0;
@@ -242,104 +337,114 @@ body{
     width: 100%;
     flex-wrap: wrap;
 }
-.cust_pro_reservation_loading_content{
+
+.cust_pro_reservation_loading_content {
     padding-right: 0.8rem;
     padding-left: 0.8rem;
 }
-.cust_pro_reservation_loading_content div:nth-child(1){
+
+.cust_pro_reservation_loading_content div:nth-child(1) {
     display: flex;
     flex-direction: column;
 }
 
-.Cardbox{
+.Cardbox {
     width: 18.5rem;
     margin: 0.2rem;
     height: 23rem;
     margin-bottom: 0.8rem;
 }
 
-.customerPage_image_container{
+.customerPage_image_container {
     height: 11rem;
 }
 
-.cord_content{
+.cord_content {
     display: flex;
     text-align: left;
     flex-direction: column;
 }
-.details_cover{
+
+.details_cover {
     display: flex;
     flex-direction: row;
     font-size: 0.8rem;
 }
-.car_type{
+
+.car_type {
     margin: 0;
     font-size: 0.8rem;
 }
-.car_brand{
+
+.car_brand {
     margin: 0;
     font-size: 2.4rem;
 }
-.details_cover p{
+
+.details_cover p {
     margin-right: 0.4rem;
 }
 
-.details_cover p svg{
+.details_cover p svg {
     margin-right: 0.3rem;
 }
-.daily_price{
+
+.daily_price {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 2.3rem;
-    background-color:#1776ED;
+    background-color: #1776ED;
     border-radius: 0.4rem;
     color: #e4e4e4;
 
 }
-.daily_price p{
+
+.daily_price p {
     margin: 0;
 }
 
-.btnreservation_container{
+.btnreservation_container {
     display: flex;
     flex-direction: row;
     justify-content: right;
 }
 
-#customerProfilePage{
+#customerProfilePage {
     display: none;
 }
 
-#customerProfilePageNavBar{
+#customerProfilePageNavBar {
     display: none;
 }
 
 /*==============================================================================================================*/
-.res_cardetail_container{
+.res_cardetail_container {
     text-align: left;
 }
 
-.resCarImagageContainer{
+.resCarImagageContainer {
     height: 12rem;
     background-color: #0dcaf0;
     margin: 0.4rem;
 }
 
 /*==============================================================================================================*/
-#DriverPageNavBar{
+#DriverPageNavBar {
     display: none;
 }
-#driverscheduelePage{
+
+#driverscheduelePage {
     display: none;
 }
-.driver_schedule_container{
+
+.driver_schedule_container {
     margin: 3.4rem;
 }
 
 /*==============================================================================================================*/
 
-.adminContentContainer{
+.adminContentContainer {
     height: 94vh;
     width: 100%;
     display: flex;
@@ -354,20 +459,20 @@ body{
     flex-direction: row;
 }
 
-.sumeryHedingBar{
+.sumeryHedingBar {
     align-items: center;
 }
 
-.sumeryHead{
+.sumeryHead {
     font-size: 1.4rem;
     font-weight: 600;
 }
 
-.card_Container{
+.card_Container {
     padding: 0.8rem;
 }
 
-.iconContainer{
+.iconContainer {
     height: 6rem;
     display: flex;
     align-items: center;
@@ -380,9 +485,10 @@ body{
     width: 6.5rem;
     height: 5.4rem;
 }
-.income_container{
+
+.income_container {
     height: 4rem;
-    background-color:#1776ED ;
+    background-color: #1776ED;
     color: #e4e4e4;
     border-radius: 0.8rem;
     display: flex;
@@ -392,13 +498,13 @@ body{
     font-size: 1.4rem;
 }
 
-.income_container p{
+.income_container p {
     margin: 0;
 }
 
-.count_container{
+.count_container {
     height: 4rem;
-    background-color:#1776ED ;
+    background-color: #1776ED;
     color: #e4e4e4;
     border-radius: 0.8rem;
     display: flex;
@@ -408,16 +514,16 @@ body{
     font-size: 1.4rem;
 }
 
-.count_container p{
+.count_container p {
     margin: 0;
 }
 
-#adminHomePage{
+#adminHomePage {
     display: none;
 }
 
 /*==============================================================================================================*/
-.adminCarManagementContainer{
+.adminCarManagementContainer {
     height: 94vh;
     width: 100%;
     display: flex;
@@ -426,65 +532,71 @@ body{
     justify-content: center;
 }
 
-.carManagmnetContentContainer{
+.carManagmnetContentContainer {
     height: 48rem;
     width: 84rem;
     flex-direction: row;
 }
-.carManagementHeding{
+
+.carManagementHeding {
     font-size: 1.4rem;
 }
 
-.searchContainer{
+.searchContainer {
     display: flex;
     margin-top: 1.4rem;
     margin-bottom: 1.4rem;
     align-items: center;
 }
-.searchButtonContainer{
+
+.searchButtonContainer {
     padding-left: 1.4rem;
 }
-.searchButtonContainer svg{
+
+.searchButtonContainer svg {
     margin-left: 0.8rem;
 }
-.viewCarImageContainer{
+
+.viewCarImageContainer {
     height: 12rem;
     background-color: #0dcaf0;
 }
 
-.view_textFlield_container{
+.view_textFlield_container {
     margin-left: 0.8rem;
     margin-right: 0.8rem;
 }
 
-#adminCarManagementPage{
+#adminCarManagementPage {
     display: none;
 }
-.imageContainer{
+
+.imageContainer {
     height: 8rem;
     background-color: #0dcaf0;
 }
 
 /*==============================================================================================================*/
 
-#adminDriverManagementPage{
+#adminDriverManagementPage {
     display: none;
 }
 
 /*==============================================================================================================*/
-#adminCustomerManagementPage{
+#adminCustomerManagementPage {
     display: none;
 }
 
 /*==============================================================================================================*/
-#adminDriverScheduleManagementPage{
+#adminDriverScheduleManagementPage {
     display: none;
 }
 
 /*==============================================================================================================*/
-#adminReservationManagementPage{
+#adminReservationManagementPage {
     display: none;
 }
-#adminNavBar{
+
+#adminNavBar {
     display: none;
 }

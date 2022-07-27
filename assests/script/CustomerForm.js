@@ -1,49 +1,55 @@
 /*--------save customer----------*/
 $("#btncustomerRegister").click(function () {
-    var data = new FormData();
-    let customer_nic = $("#customer_nic").val();
-    let customer_name = $("#customerName").val();
-    let customer_address = $("#customer_address").val();
-    let customer_password = $("#customerPassword").val();
-    let customer_telnumber = $("#customer_telnumber").val();
-    let customer_email = $("#customer_email").val();
-    let idPhoto = $("#customerIdcardPhoto")[0].files[0];
-    let customerIdcardUpload = $("#customerIdcardPhoto")[0].files[0].name;
-    let licenPhoto = $("#customerlicenPhoto")[0].files[0];
-    let customerLicenseUpload = $("#customerlicenPhoto")[0].files[0].name;
+
+    if (checkCustomerRegistrationValidation()) {
+        var data = new FormData();
+        let customer_nic = $("#customer_nic").val();
+        let customer_name = $("#customerName").val();
+        let customer_address = $("#customer_address").val();
+        let customer_password = $("#customerPassword").val();
+        let customer_telnumber = $("#customer_telnumber").val();
+        let customer_email = $("#customer_email").val();
+        let idPhoto = $("#customerIdcardPhoto")[0].files[0];
+        let customerIdcardUpload = $("#customerIdcardPhoto")[0].files[0].name;
+        let licenPhoto = $("#customerlicenPhoto")[0].files[0];
+        let customerLicenseUpload = $("#customerlicenPhoto")[0].files[0].name;
 
 
-    customer = {
-        customerNic: customer_nic,
-        customerName: customer_name,
-        customerPassword: customer_password,
-        email: customer_email,
-        customerAddress: customer_address,
-        customerTel: customer_telnumber,
-        idCard: customerIdcardUpload,
-        drivingLicense: customerLicenseUpload
+        customer = {
+            customerNic: customer_nic,
+            customerName: customer_name,
+            customerPassword: customer_password,
+            email: customer_email,
+            customerAddress: customer_address,
+            customerTel: customer_telnumber,
+            idCard: customerIdcardUpload,
+            drivingLicense: customerLicenseUpload
+        }
+
+        data.append("files", idPhoto);
+        data.append("files", licenPhoto);
+        data.append("customer", new Blob([JSON.stringify(customer)], {type: "application/json"}))
+
+
+        $.ajax({
+            url: "http://localhost:8080/CarRentalSystem_war_exploded/customer",
+            method: 'post',
+            async: true,
+            contentType: false,
+            processData: false,
+            data: data,
+            success: function (resp) {
+                alert(resp.message)
+                clearAll();
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    }else {
+        alert("plese ckeck the details that inputs..");
     }
 
-    data.append("files", idPhoto);
-    data.append("files", licenPhoto);
-    data.append("customer", new Blob([JSON.stringify(customer)], {type: "application/json"}))
-
-
-    $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war_exploded/customer",
-        method: 'post',
-        async: true,
-        contentType: false,
-        processData: false,
-        data: data,
-        success: function (resp) {
-            alert(resp.message)
-            clearAll();
-        },
-        error: function (err) {
-            console.log(err);
-        }
-    });
 
 })
 
@@ -176,7 +182,7 @@ $("#custProfSearch").click(function () {
                 var fetch = document.querySelector('.car_container').innerHTML;
                 dynamic.innerHTML = ` <div class="Cardbox">
                                     <div class="customerFormCard card" style=" margin-top: 1.4rem">
-                                        <div id="card${car.number}" class="customerPage_image_container">
+                                        <div id="card-${car.number}" class="customerPage_image_container">
                                             
                                         </div>
                                         <div class="cord_content card-body">
@@ -239,13 +245,18 @@ $("#custProfSearch").click(function () {
 
 
                 $(".reserve").click(function () {
-                    let carID = $(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().find('.customerPage_image_container').attr('id');
-                    console.log(carID);
-                    loadCarDetailsToTheReservationModel(carID);
+                    let carID =$(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().find('.customerPage_image_container').attr('id');
+                   var id = carID.split('-');
+
+                   var car_Letter = id[1]
+                   var car_number = id[2]
+                    var car_id =car_Letter+"-"+car_number;
+                    console.log(car_id);
+                    loadCarDetailsToTheReservationModel(car_id);
                 });
 
 
-                $(`#card${car.number}`).css({
+                $(`#card-${car.number}`).css({
                     "background":`url('http://localhost:8080/CarRentalSystem_war_exploded/uploads/${car.imageDetails.frontImage}')`,
                     "background-size": "cover",
                     "height": "10rem"
@@ -347,7 +358,11 @@ function loadAllReservations() {
 
 /*put a reservaion*/
 $("#btn_Reserve").click(function () {
-    setAReservation();
+    if (checkValidationOfReservation()) {
+        setAReservation();
+    }else {
+        alert("plese enter the details correctly")
+    }
 })
 
 
@@ -376,26 +391,12 @@ function loadCarDetailsToTheReservationModel(carID) {
             let sideImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/" + resp.data.imageDetails.sideImage;
             let interiorImage = "http://localhost:8080/CarRentalSystem_war_exploded/uploads/" + resp.data.imageDetails.interiorImage;
 
-            $("#resevation_frontImage").css({
-                "background": `url(${frontImage})`,
-                "background-size": "cover",
-                "height": "12rem"
-            });
-            $("#resevation_BackImage").css({
-                "background": `url(${backImage})`,
-                "background-size": "cover",
-                "height": "12rem"
-            });
-            $("#resevation_sideImage").css({
-                "background": `url(${sideImage})`,
-                "background-size": "cover",
-                "height": "12rem"
-            });
-            $("#resevation_interiorImage").css({
-                "background": `url(${interiorImage})`,
-                "background-size": "cover",
-                "height": "12rem"
-            });
+            $("#resevation_frontImage").attr("src",frontImage)
+            $("#resevation_BackImage").attr("src",backImage)
+            $("#resevation_sideImage").attr("src",sideImage)
+            $("#resevation_interiorImage").attr("src",interiorImage)
+
+
 
             /*set today date*/
             var now = new Date();
