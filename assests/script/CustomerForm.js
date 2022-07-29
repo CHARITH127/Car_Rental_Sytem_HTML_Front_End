@@ -572,6 +572,18 @@ function setAReservation() {
 
 }
 
+function clearAllByReservation() {
+    $("#res_form_resID").val("");
+    $("#cust_pro_customer_nic").val("");
+    $("#res_form_carNumber").val("");
+    $("#resform_today_date").val("");
+    $("#resform_check_in_time").val("");
+    $("#resform_check_in_date").val("");
+    $("#resform_return_date").val("");
+    $("#resform_return_date").val("");
+    $('input[name="reservation_driverSelection"]:checked').val();
+}
+
 function clearAll() {
     $("#customer_nic").val("");
     $("#customerName").val("");

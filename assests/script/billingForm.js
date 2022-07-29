@@ -1,8 +1,13 @@
 
 $("#billReservation").click(function () {
-    genarateBillingId();
-    setTodayDate();
-    calCalateHirePayment();
+
+    if ($("#Reservationidsearch").val() == '') {
+        alert("please enter the reservation id ")
+    }else {
+        genarateBillingId();
+        setTodayDate();
+        calCalateHirePayment();
+    }
 })
 
 $("#calculate_fullPayment").click(function () {

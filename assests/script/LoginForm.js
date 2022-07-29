@@ -59,6 +59,9 @@ $("#btn_login_button").click(function () {
 
                 loadAllReservations();
 
+                $("#login_user_name").val("");
+                $("#login_password").val("");
+
             } else if (role == "Driver") {
                 $("#guestUserHomePage").css("display", "none");
                 $("#guestUserHomePageNavBar").css("display", "none");
@@ -76,6 +79,9 @@ $("#btn_login_button").click(function () {
                 $("#adminCustomerManagementPage").css("display", "none");
                 $("#adminDriverScheduleManagementPage").css("display", "none");
                 loadWeeklySchedule(user_name)
+
+                $("#login_user_name").val("");
+                $("#login_password").val("");
 
             } else if (role == "Admin") {
                 $("#guestUserHomePage").css("display", "none");
@@ -102,9 +108,18 @@ $("#btn_login_button").click(function () {
                 setAvailableDrivers()
                 setAvailableCars()
                 setOccupiedCars()
+
+                $("#login_user_name").val("");
+                $("#login_password").val("");
+
             } else {
                 alert("login access denied");
+                $("#login_user_name").val("");
+                $("#login_password").val("");
             }
+
+
+
         },
         error: function (err) {
             console.log(err);

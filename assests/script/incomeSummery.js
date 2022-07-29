@@ -73,16 +73,14 @@ function setOccupiedDrivers() {
 
 function setAvailableDrivers() {
 
-   /* $.ajax({
-        url: "http://localhost:8080/CarRentalSystem_war_exploded/driver",
+    $.ajax({
+        url: "http://localhost:8080/CarRentalSystem_war_exploded/driver?availableDrivers",
         method: "get",
         success: function (res) {
-            for (const driver of resp.data) {
-
-            }
+            $(".available_driver_count_driver_count").text(res.data);
         }
-    });*/
-    $(".available_driver_count_driver_count").text('6');
+    });
+
 }
 
 function setAvailableCars() {

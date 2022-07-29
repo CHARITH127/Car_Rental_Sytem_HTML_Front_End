@@ -7,7 +7,13 @@ $("#btnReservationManageGetAll").click(function () {
 })
 
 $("#updateReservation").click(function () {
-    loadReservationDetailsToUpdate();
+    if ($("#Reservationidsearch").val() == '') {
+        alert("please enter the reservation id ")
+        return;
+    }else {
+        loadReservationDetailsToUpdate();
+    }
+
 })
 
 $("#btnReservationManageTodayReservations").click(function () {
