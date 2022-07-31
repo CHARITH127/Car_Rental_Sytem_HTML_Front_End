@@ -327,6 +327,7 @@ body {
     width: 18.5rem;
     margin: 0.2rem;
     height: 23rem;
+    box-shadow: 2px 0px 20px 0px;
 }
 
 .car_container {
@@ -355,6 +356,8 @@ body {
     margin: 0.2rem;
     height: 23rem;
     margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+    box-shadow: 2px 0px 20px 7px;
 }
 
 .customerPage_image_container {
